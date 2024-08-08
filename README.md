@@ -1,5 +1,3 @@
-# sademban.github.io
-
 # Cloud Infrastructure Engineer
 
 ### Education

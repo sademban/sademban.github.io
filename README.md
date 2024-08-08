@@ -3,7 +3,7 @@
 # Cloud Infrastructure Engineer
 
 ### Education
-Home Schooled
+Home Schooled ,
 Self learning
 
 ### Work Experience

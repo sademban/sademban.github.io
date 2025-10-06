@@ -30,7 +30,7 @@ twitter_username: madbios9
 github_username:  sademban
 
 # Build settings
-theme: minima
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
 

@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{%- assign posts_to_show = site.posts -%}
+{%- if page.category -%}
+  {%- assign posts_to_show = posts_to_show | where_exp: "post", "post.categories contains page.category" -%}
+{%- endif -%}
+{%- if page.tag -%}
+  {%- assign posts_to_show = posts_to_show | where_exp: "post", "post.tags contains page.tag" -%}
+{%- endif -%}
+
+{%- assign date_format = site.minima.date_format | default: "%b %d, %Y" -%}
+
+<article class="post-archive">
+  {%- if page.title -%}
+  <header class="archive-header">
+    <h1>{{ page.title }}</h1>
+    {%- if page.description -%}
+      <p class="archive-description">{{ page.description }}</p>
+    {%- endif -%}
+  </header>
+  {%- endif -%}
+
+  {%- if posts_to_show and posts_to_show != empty -%}
+  <ul class="post-list archive-list">
+    {%- for post in posts_to_show -%}
+    <li class="archive-item">
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      {%- if page.show_excerpts -%}
+        <div class="post-excerpt">{{ post.excerpt }}</div>
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- else -%}
+    <p class="empty-archive">No posts found here yet. Check back soon.</p>
+  {%- endif -%}
+</article>

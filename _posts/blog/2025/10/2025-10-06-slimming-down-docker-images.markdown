@@ -2,7 +2,12 @@
 layout: post
 title:  "Slimming down the Docker images (multi-stage build)"
 date:   2025-10-06 15:21:36 +0900
+author: sademban
 categories: Docker, docker compose
+tags:
+  - docker
+  - multi-stage
+  - performance
 ---
 
 ## What does it mean to slim down a Docker image?

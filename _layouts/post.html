@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+{%- assign post_author = page.author | default: site.author -%}
+{%- if post_author and post_author.name -%}
+  {%- assign post_author_name = post_author.name -%}
+{%- else -%}
+  {%- assign post_author_name = post_author -%}
+{%- endif -%}
+
+{%- assign post_tags = page.tags -%}
+{%- if post_tags == nil or post_tags == empty -%}
+  {%- assign post_tags = page.categories -%}
+{%- endif -%}
+
+<small>{{ page.date | date: "%-d %B %Y" }}</small>
+<h1>{{ page.title }}</h1>
+
+{%- if post_author_name -%}
+<p class="view">by {{ post_author_name }}</p>
+{%- endif -%}
+
+{{ content }}
+
+{%- if post_tags and post_tags != empty -%}
+  <small>tags: <em>{{ post_tags | join: "</em> - <em>" }}</em></small>
+{%- endif -%}

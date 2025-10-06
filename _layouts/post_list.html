@@ -9,6 +9,9 @@ layout: default
 {%- if page.tag -%}
   {%- assign posts_to_show = posts_to_show | where_exp: "post", "post.tags contains page.tag" -%}
 {%- endif -%}
+{%- if page.path_contains -%}
+  {%- assign posts_to_show = posts_to_show | where_exp: "post", "post.path contains page.path_contains" -%}
+{%- endif -%}
 
 {%- assign date_format = site.minima.date_format | default: "%b %d, %Y" -%}
 

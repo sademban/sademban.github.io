@@ -67,3 +67,6 @@ adsense_publisher_id: "ca-pub-8809695924084941"
 # If you serve users in the EEA/UK/CH, prefer using a CMP and set this to false until
 # you've implemented consent checks.
 adsense_auto_load: true
+
+# Google Tag Manager container ID. Set to your container to enable GTM snippets.
+gtm_id: "GTM-TKW9MKG3"

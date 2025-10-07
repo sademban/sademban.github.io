@@ -70,3 +70,5 @@ adsense_auto_load: true
 
 # Google Tag Manager container ID. Set to your container to enable GTM snippets.
 gtm_id: "GTM-TKW9MKG3"
+ga4_id: "G-NHJGEGME7G"
+

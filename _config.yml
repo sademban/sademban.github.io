@@ -63,3 +63,7 @@ jekyll-archives:
 github:
   metadata: false
 adsense_publisher_id: "ca-pub-8809695924084941"
+# When true, AdSense runtime will auto-load on pages where no CMP is present.
+# If you serve users in the EEA/UK/CH, prefer using a CMP and set this to false until
+# you've implemented consent checks.
+adsense_auto_load: true

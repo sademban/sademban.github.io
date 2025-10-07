@@ -1,6 +1,16 @@
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/site-icon.svg' | relative_url }}">
+{%- include cmp.html -%}
 {%- if site.adsense_publisher_id and site.adsense_publisher_id != "" -%}
-	{%- include adsense.html -%}
+  {%- include adsense.html -%}
+{%- endif -%}
+{%- if site.adsense_publisher_id and site.adsense_publisher_id != "" -%}
+  <meta name="adsense-client" content="{{ site.adsense_publisher_id }}">
+{%- endif -%}
+{%- if page.adsense == false -%}
+  <meta name="adsense-optout" content="true">
+{%- endif -%}
+{%- if site.adsense_auto_load != nil -%}
+  <meta name="adsense-auto-load" content="{{ site.adsense_auto_load }}">
 {%- endif -%}
 {%- assign meta_description = page.description | default: page.excerpt | default: site.description -%}
 <meta name="description" content="{{ meta_description | strip_newlines | strip | escape }}">

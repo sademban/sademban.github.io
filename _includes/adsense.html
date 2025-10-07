@@ -6,8 +6,100 @@ Usage: set `adsense_publisher_id: "ca-pub-XXXXXXXXXXXXXXX"` in `_config.yml` and
 included automatically.
 {%- endcomment -%}
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_publisher_id }}"
-  crossorigin="anonymous"></script>
+<script>
+  (function(){
+  var meta = document.querySelector('meta[name=adsense-client]');
+  var pub = meta ? meta.getAttribute('content') : null;
+    function loadAdsense(){
+      if (document.querySelector('script[data-adsense-loaded]')) return;
+      var s = document.createElement('script');
+      s.async = true;
+      s.setAttribute('data-adsense-loaded','true');
+      s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + pub;
+      s.crossOrigin = 'anonymous';
+      document.head.appendChild(s);
+    }
+
+    // Wait for CMP to be ready and return consent status
+    function checkConsentAndLoad(){
+      try {
+        var pageOptOut = document.querySelector('meta[name=adsense-optout]');
+  var autoMeta = document.querySelector('meta[name=adsense-auto-load]');
+  var autoLoad = autoMeta ? (autoMeta.getAttribute('content') === 'true') : false;
+
+        function loadIfAllowed(){
+          if (pageOptOut && pageOptOut.getAttribute('content') === 'true'){
+            console.log('AdSense: page opted out via front matter.');
+            return;
+          }
+          loadAdsense();
+        }
+
+        // Helper to interpret consent response and load if allowed
+        function handleConsentResponse(obj){
+          var ok = false;
+          try {
+            // Legacy CMP shape: { consentGiven: true }
+            if (obj && (obj.consentGiven === true || obj.consent === true)) ok = true;
+            // IAB TCF shape: tcData with purpose.consents map or tcString
+            if (!ok && obj && obj.tcString) {
+              // If a tcString exists and purposes show at least one consent, consider it allowed.
+              try {
+                var pc = obj.purpose && obj.purpose.consents;
+                if (pc && Object.keys(pc).some(function(k){ return pc[k]; })) ok = true;
+              } catch(e){}
+            }
+          } catch(e){ console.error(e); }
+          if (ok) loadAdsense();
+          else console.log('AdSense: CMP present but consent not granted.');
+        }
+
+        // Detect IAB TCF __tcfapi first (common with Google-managed CMP)
+        if (window.__tcfapi && typeof window.__tcfapi === 'function'){
+          try {
+            // initial read
+            window.__tcfapi('getTCData', 2, function(tcData, success){
+              if (success) handleConsentResponse(tcData);
+            });
+            // listen for updates
+            try {
+              window.__tcfapi('addEventListener', 2, function(tcData, success){
+                if (success) handleConsentResponse(tcData);
+              });
+            } catch(e) {
+              // some CMPs may not support addEventListener; ignore
+            }
+          } catch(e){
+            console.error('Error calling __tcfapi', e);
+          }
+        } else if (window.__cmp && typeof window.__cmp === 'function'){
+          // legacy CMP API
+          try {
+            window.__cmp('getConsentData', null, function(res){
+              handleConsentResponse(res);
+            });
+          } catch(e){ console.error('Error calling __cmp', e); }
+        } else {
+          // No CMP found
+          if (autoLoad){
+            // auto-load globally if configured in site config
+            loadIfAllowed();
+          } else {
+            console.warn('No CMP detected and auto_load disabled: AdSense runtime will not be loaded.');
+          }
+        }
+      } catch(e){
+        console.error('Error checking CMP consent', e);
+      }
+    }
+
+    if (document.readyState === 'complete' || document.readyState === 'interactive'){
+      checkConsentAndLoad();
+    } else {
+      document.addEventListener('DOMContentLoaded', checkConsentAndLoad);
+    }
+  })();
+</script>
 
 {%- comment -%}
 If you need to add inline ad units (ins.adsbygoogle elements), put them in your templates or posts where

@@ -1,0 +1,34 @@
+{%- comment -%}
+Google Consent Mode / CMP include placeholder.
+
+This file loads the CMP script (Google's CMP or another certified CMP). The exact snippet
+is provided by the Google CMP onboarding flow in AdSense. Replace the placeholder below with
+the real CMP snippet you receive from AdSense. The CMP must be included before AdSense's
+runtime so that consent decisions are available when the AdSense script would load.
+
+Example usage:
+  - Include this file in `head-custom.html` before adsense.html
+  - The adsense include will wait for a consent flag via a minimal API check below.
+
+If you'd like, paste the exact CMP snippet here and I'll embed it.
+{%- endcomment -%}
+
+<script>
+  /* Placeholder CMP shim for testing.
+     Replace this with the actual CMP script produced by Google during onboarding.
+     This shim exposes a minimal API `window.__cmp` for consent checks and invokes
+     any registered callbacks immediately with `consentGiven = false`.
+  */
+  (function(){
+    if (window.__cmp) return;
+    window.__cmp = function(cmd, param, callback) {
+      // simple mock: no consent by default; real CMP will provide proper behaviour
+      if (typeof callback === 'function') {
+        // Example response shape: {consentGiven: false}
+        callback({consentGiven: false});
+      }
+    };
+    // Allow other code to register a ready handler
+    window.__cmpReady = true;
+  })();
+</script>

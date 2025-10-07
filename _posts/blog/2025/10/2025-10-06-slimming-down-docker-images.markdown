@@ -2,13 +2,18 @@
 layout: post
 title:  "Slimming down the Docker images (multi-stage build)"
 date:   2025-10-06 15:21:36 +0900
+description: "How multi-stage Dockerfiles cut runtime image size, what to watch for, and tips for smoother builds."
 author: sademban
 categories: Docker, docker compose
 tags:
   - docker
   - multi-stage
   - performance
+image: /assets/posts/blog/2025/10/slimming-down-docker-images/featured-hero.svg
+image_alt: "Abstract diagram showing build artifacts moving into a runtime container"
+image_caption: "Abstract builder-to-runtime flow for multi-stage Docker images"
 ---
+
 
 ## What does it mean to slim down a Docker image?
 
@@ -25,6 +30,8 @@ Common tactics include:
 - Using a language specific builder image (for example `node:20` or `golang:1.22`) for builds and an Alpine or distroless base for runtime.
 - Copying dependency locks and source code in a deliberate order so Docker layer caching works reliably.
 - Running tests in an intermediate stage so failures do not break the cache for the slim runtime stage.
+
+
 
 ## Advantages
 
@@ -52,3 +59,10 @@ Common tactics include:
 ## Bringing it together
 
 Treat slimming as an iterative exercise: profile what your application needs, experiment with multi-stage builds, and automate validation so you catch missing dependencies early. Keep a heavier "debug" tag handy for operational use, and document the rationale for every tool you remove. That balance delivers lean images without sacrificing maintainability.
+
+
+
+
+
+
+

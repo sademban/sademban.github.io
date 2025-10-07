@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Researching static site deployments"
+description: "Benchmarked GitHub Pages, Cloudflare Pages, and Netlify to figure out the next hosting step."
 date: 2025-09-30 18:15:00 +0900
 author: sademban
 categories: home
-summary: Benchmarked GitHub Pages, Cloudflare Pages, and Netlify to choose the next hosting step.
 tags:
   - infra
   - hosting

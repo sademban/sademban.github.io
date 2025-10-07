@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Visual refresh shipped"
+description: "A dark/light refresh, simplified navigation, and a curated homepage timeline rollout."
 date: 2025-10-04 09:00:00 +0900
 author: sademban
 categories: home
-summary: Rolled out the dark/light toggle, rebuilt navigation, and a curated home timeline.
 tags:
   - site
   - ui

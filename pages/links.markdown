@@ -4,22 +4,9 @@ title: Links
 permalink: /links/
 ---
 
-## Around the Web
+## Site
 
-- [GitHub](https://github.com/username) — repositories, experiments, and open-source work.
-- [LinkedIn](https://www.linkedin.com/in/username/) — professional updates and work history.
-- [Twitter](https://twitter.com/username) — quick thoughts, links, or announcements.
-
-## Favorite Resources
-
-- [Resource Name](https://example.com) — why it is useful to you.
-- [Newsletter or Blog](https://example.com) — what it covers and how often you read it.
-- [Toolbox](https://example.com) — list of handy utilities, cheatsheets, or reference guides.
-
-## Communities
-
-- [Forum or Slack](https://example.com) — community you learn from or contribute to regularly.
-- [Local Meetup](https://example.com) — where you meet people with similar interests.
+- [Tags]({{ "/tags/" | relative_url }}) — explore topics across everything on the site.
 
 ## People I Follow in Tech
 
@@ -31,5 +18,3 @@ permalink: /links/
 - [Mat Ryer](https://x.com/matryer) — Go community leader who shares thoughtful takes on software design.
 - [Julia Evans](https://juliaevans.ca) — publishes zines and posts that make complex systems approachable.
 - [Eli Bendersky](https://eli.thegreenplace.net) — documents compilers, LLVM, and low-level programming insights.
-
-Swap in your actual links and add sections as needed so visitors can explore more of your work.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Weekly lab notes: shipping small wins"
+description: "Notes on small workflow tweaks, caching experiments, and tempo-based deep work logs from the week."
 date: 2025-09-28 09:00:00 +0900
 author: sademban
 categories: journal

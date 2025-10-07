@@ -20,10 +20,8 @@
 
 title: sademban's blog
 email: nabinsademba@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: >-
+  Journal entries, build notes, and experiments from whatever I'm tinkering with next.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: madbios9
@@ -54,3 +52,14 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+jekyll-archives:
+  enabled:
+    - tags
+  layout: tag
+  permalinks:
+    tag: /tags/:name/
+
+github:
+  metadata: false
+adsense_publisher_id: "ca-pub-8809695924084941"

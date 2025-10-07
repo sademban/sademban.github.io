@@ -1,1 +1,17 @@
-<style>.writing-header h1::before, .archive-header h1::before { content: none; }</style>
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/img/site-icon.svg' | relative_url }}">
+{%- if site.adsense_publisher_id and site.adsense_publisher_id != "" -%}
+	{%- include adsense.html -%}
+{%- endif -%}
+{%- assign meta_description = page.description | default: page.excerpt | default: site.description -%}
+<meta name="description" content="{{ meta_description | strip_newlines | strip | escape }}">
+<meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+<meta property="og:description" content="{{ meta_description | strip_newlines | strip | escape }}">
+<meta property="og:type" content="{{ page.layout == 'post' or page.collection == 'posts' ? 'article' : 'website' }}">
+<meta property="og:url" content="{{ page.url | relative_url | absolute_url }}">
+{%- if page.image -%}
+<meta property="og:image" content="{{ page.image | relative_url | absolute_url }}">
+{%- endif -%}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
+<meta name="twitter:description" content="{{ meta_description | strip_newlines | strip | escape }}">
+<style>.writing-header h1::before, .archive-header h1::before, .tag-collection__header h1::before { content: none; }</style>

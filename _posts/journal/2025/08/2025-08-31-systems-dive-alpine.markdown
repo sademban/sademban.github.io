@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Systems dive: Alpine vs. Debian"
+description: "Benchmarking Alpine and Debian slim images to understand performance, tooling, and debugging trade-offs."
 date: 2025-08-31 19:45:00 +0900
 author: sademban
 categories: journal

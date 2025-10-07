@@ -1,0 +1,15 @@
+{%- comment -%}
+Include this file to inject the AdSense script. It is conditionally included in `head-custom.html` when
+`site.adsense_publisher_id` is set in `_config.yml`.
+
+Usage: set `adsense_publisher_id: "ca-pub-XXXXXXXXXXXXXXX"` in `_config.yml` and the script will be
+included automatically.
+{%- endcomment -%}
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_publisher_id }}"
+  crossorigin="anonymous"></script>
+
+{%- comment -%}
+If you need to add inline ad units (ins.adsbygoogle elements), put them in your templates or posts where
+appropriate. This include only loads the global AdSense runtime once per page.
+{%- endcomment -%}

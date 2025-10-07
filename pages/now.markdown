@@ -5,7 +5,7 @@ permalink: /now/
 last_updated: 2025-10-06
 ---
 
-_Last updated {{ page.last_updated | date: "%B %d, %Y" }}_
+### Last updated {{ page.last_updated | date: "%B %d, %Y" }}
 
 - 🏠 Based in Fukuoka, Japan.
 - 🧑‍💻 employed

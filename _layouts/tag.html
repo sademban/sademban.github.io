@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{%- assign tag_name = page.title -%}
+{%- assign posts_sorted = page.posts | sort: "date" | reverse -%}
+{%- assign posts_count = posts_sorted | size -%}
+
+<section class="tag-collection">
+  <header class="tag-collection__header">
+    <h1>Posts tagged "{{ tag_name }}"</h1>
+    <p>{{ posts_count }} {% if posts_count == 1 %}post{% else %}posts{% endif %}</p>
+    <p><a href="{{ "/tags/" | relative_url }}">← Back to all tags</a></p>
+  </header>
+
+  {%- if posts_count > 0 -%}
+    <ul class="tag-collection__list">
+      {%- for post in posts_sorted -%}
+        <li>
+          <span class="tag-detail__date">{{ post.date | date: "%b %d, %Y" }}</span>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {%- if post.tags -%}
+            <span class="tag-detail__tags">
+              {%- for tag_label in post.tags -%}
+                <span class="tag-pill">{{ tag_label }}</span>
+              {%- endfor -%}
+            </span>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- else -%}
+    <p>No posts yet.</p>
+  {%- endif -%}
+</section>

@@ -1,0 +1,18 @@
+{%- assign canonical_url = page.url | relative_url | absolute_url -%}
+{%- assign jsonld_description = page.description | default: page.excerpt | default: site.description -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": {{ (page.author | default: site.author) | jsonify }}
+  }{%- if page.image -%},
+  "image": {{ page.image | relative_url | absolute_url | jsonify }}{%- endif -%},
+  "url": {{ canonical_url | jsonify }},
+  "description": {{ jsonld_description | strip_newlines | jsonify }}
+}
+</script>

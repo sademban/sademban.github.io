@@ -16,5 +16,5 @@ permalink: /links/
 - [Jon Gjengset](https://thesquareplanet.com) — systems engineer known for great Rust teaching materials.
 - [Filippo Valsorda](https://filippo.io/) — cryptography engineer writing about security and Go.
 - [Mat Ryer](https://x.com/matryer) — Go community leader who shares thoughtful takes on software design.
-- [Julia Evans](https://juliaevans.ca) — publishes zines and posts that make complex systems approachable.
+- [Julia Evans](https://jvns.ca) — publishes zines and posts that make complex systems approachable.
 - [Eli Bendersky](https://eli.thegreenplace.net) — documents compilers, LLVM, and low-level programming insights.

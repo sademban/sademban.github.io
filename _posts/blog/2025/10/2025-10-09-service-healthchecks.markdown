@@ -1,0 +1,194 @@
+---
+layout: post
+title: "Why Service Health Checks Matter More Than You Think ?"
+description: "A compact reference of status pages and quick healthcheck commands for popular services (GitHub, AWS, Azure, Bitbucket, Cloudflare, Netlify, and more)."
+date: 2025-10-09 10:00:00 +0900
+author: sademban
+categories: blog
+tags:
+  - ops
+  - monitoring
+  - status
+  - reliability
+image: /assets/posts/blog/2025/10/service-health-check/featured-image.png
+image_alt: "doodle image showing service health check"
+image_caption: "Before You Get Frustrated: Quick Healthchecks for Common Services"
+---
+
+## 🩺 Why Service Health Checks Matter More Than You Think ?
+
+When something breaks in your stack the first reaction is often "what changed?" — but 9 times out of 10 it's an external service outage or a partial degradation. Here’s a short, skimmable reference you can keep handy: official status pages, programmatic endpoints (when available), and copy-paste curl checks you can run from your terminal.
+
+Tip: many services host their status pages on Statuspage.io and expose a small JSON API at `/api/v2/status.json` or `/api/v2/summary.json`. If the status page looks healthy but your app is affected, check the provider's API and region-specific dashboards.
+
+## How to use this guide
+
+- Use the status page for human-facing updates and historical incidents.
+- Use the API or `/api` endpoints for automation (monitoring, alerts, incident correlation).
+- If a provider uses a managed CMP or feature flag, check their control plane (e.g., AWS Service Health Dashboard, Azure Service Health) for region-specific notices.
+- Example curl patterns below assume `jq` is available for pretty JSON parsing. If you don't have `jq`, add it or just inspect plain output.
+
+---
+
+## Repositories & Source Control
+
+- GitHub
+  - Status page: https://www.githubstatus.com/
+  - API (Statuspage): https://www.githubstatus.com/api/v2/status.json
+  - Quick check:
+    - curl -s https://www.githubstatus.com/api/v2/status.json | jq -r '.status.description'
+
+- GitLab
+  - Status page: https://status.gitlab.com/
+  - API: https://status.gitlab.com/api/v2/status.json
+  - Quick check:
+    - curl -s https://status.gitlab.com/api/v2/status.json | jq -r '.status.description'
+
+- Bitbucket / Atlassian
+  - Status page: https://bitbucket.status.atlassian.com/
+  - Atlassian status hub: https://status.atlassian.com/
+  - Many Atlassian pages provide a Statuspage API under `/api/v2/`
+
+## CI / CD / Build
+
+- CircleCI
+  - https://status.circleci.com/
+  - API: https://status.circleci.com/api/v2/summary.json
+
+- Travis CI (legacy)
+  - https://www.traviscistatus.com/
+
+- GitHub Actions uses GitHub status (see above)
+
+## Cloud providers & Platform
+
+- AWS (global)
+  - Service Health Dashboard (public): https://status.aws.amazon.com/
+  - Personal/Account Health: https://health.aws.amazon.com/ (requires login)
+  - Tip: AWS doesn't provide a single simple JSON endpoint for all services publicly; prefer the dashboard or region-specific RSS/API.
+
+- Google Cloud
+  - Status page: https://status.cloud.google.com/
+  - JSON endpoints for specific components are reachable from that UI; many GCP services have region filters.
+
+- Microsoft Azure
+  - Status: https://status.azure.com/en-us/status
+  - Azure Service Health in portal gives subscription-scoped info.
+
+## Hosting, CDN & Edge
+
+- Cloudflare
+  - https://www.cloudflarestatus.com/
+  - API: https://www.cloudflarestatus.com/api/v2/summary.json
+
+- Fastly
+  - https://status.fastly.com/
+
+- Akamai
+  - https://status.akamai.com/
+
+- Netlify
+  - https://www.netlifystatus.com/
+
+- Vercel
+  - https://www.vercel-status.com/
+
+## Registries & Package Managers
+
+- Docker Hub
+  - https://status.docker.com/
+
+- npm
+  - https://status.npmjs.org/
+
+- PyPI
+  - https://status.python.org/
+
+## Databases & Managed DBs
+
+- MongoDB Atlas
+  - https://status.cloud.mongodb.com/
+
+- Redis (Redis Labs)
+  - https://status.redislabs.com/
+
+- PostgreSQL / Managed (examples)
+  - Heroku Postgres: https://status.heroku.com/
+
+## Observability & Alerts
+
+- Sentry
+  - https://status.sentry.io/
+
+- Datadog
+  - https://status.datadoghq.com/
+
+- PagerDuty
+  - https://status.pagerduty.com/
+
+## Payments and APIs
+
+- Stripe
+  - https://status.stripe.com/
+
+- Twilio
+  - https://status.twilio.com/
+
+## CDNs, Edge and DDoS protection
+
+- CloudFront (AWS)
+  - See AWS Service Health Dashboard
+
+- Cloudflare (see above)
+
+---
+
+## Programmatic healthchecks — patterns and examples
+
+Most Statuspage.io-based services expose `/api/v2/status.json` or `/api/v2/summary.json`. A small shell snippet:
+
+```bash
+# generic statuspage check (works for many providers using Statuspage.io)
+URL="https://www.githubstatus.com/api/v2/status.json"
+curl -s "$URL" | jq .
+
+# check that the status is 'operational' (Statuspage uses readable descriptions)
+curl -s "$URL" | jq -r '.status.description'
+```
+
+For endpoints that return `summary` objects (with component status lists):
+
+```bash
+URL="https://www.cloudflarestatus.com/api/v2/summary.json"
+curl -s "$URL" | jq -r '.status.description'
+curl -s "$URL" | jq -r '.components[] | "\(.name): \(.status)"'
+```
+
+If you want an HTTP code-only quick-check (not recommended for status detail but useful for simple monitoring):
+
+```bash
+curl -I -s -o /dev/null -w "%{http_code} %{url_effective}\n" https://www.githubstatus.com/
+```
+
+## Automating checks in CI or uptime monitors
+
+- Use a monitoring job that polls the Statuspage API every 1–5 minutes (respect provider rate limits).
+- Correlate upstream incidents with your app telemetry (errors, latency, rollout times) to avoid chasing false positives.
+- Configure alerts with a short cool-down window and add escalation rules — outages in global CDNs often trigger bursts of alerts.
+
+## When the status says "operational" but you’re still affected
+
+1. Check region-specific dashboards (cloud providers often have region incidents).
+2. Inspect recent deploys, feature flags, or DNS changes in your system.
+3. Use `traceroute`/`mtr` to check network path to the provider.
+4. Test from multiple locations (local dev, CI runner, an external host) to isolate whether it’s a client-specific issue.
+
+## Final notes
+
+Keep this post as a quick reference. If you want, I can:
+
+- add a small `scripts/healthcheck.sh` that runs a chosen subset of checks and returns non-zero on failure,
+- add GitHub Actions workflow to ping these endpoints and post a digest to Slack, or
+- create a single-page status dashboard inside the repo that aggregates these APIs for your team.
+
+Which of those would you like next? I can prepare the script or the GitHub Action for you.

@@ -15,7 +15,7 @@ image_caption: "Abstract builder-to-runtime flow for multi-stage Docker images"
 ---
 
 
-## What does it mean to slim down a Docker image?
+## 🐳 What does it mean to slim down a Docker image ?
 
 Slimming down a Docker image means cutting away anything that does not need to ship with your application runtime. That typically includes trimming unused packages, choosing a smaller base image, flattening layers, and compiling only the binaries you actually ship. The goal is to leave behind the bare minimum that the container needs when it starts.
 

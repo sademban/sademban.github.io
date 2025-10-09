@@ -33,106 +33,112 @@ Tip: many services host their status pages on Statuspage.io and expose a small J
 ## Repositories & Source Control
 
 - GitHub
-  - Status page: https://www.githubstatus.com/
-  - API (Statuspage): https://www.githubstatus.com/api/v2/status.json
+  - Status page: [https://www.githubstatus.com/](https://www.githubstatus.com/)
+  - API (Statuspage): [https://www.githubstatus.com/api/v2/status.json](https://www.githubstatus.com/api/v2/status.json)
   - Quick check:
-    - curl -s https://www.githubstatus.com/api/v2/status.json | jq -r '.status.description'
+
+    ```zsh
+    curl -s https://www.githubstatus.com/api/v2/status.json | jq -r '.status.description'
+    ```
 
 - GitLab
-  - Status page: https://status.gitlab.com/
-  - API: https://status.gitlab.com/api/v2/status.json
+  - Status page: [https://status.gitlab.com/](https://status.gitlab.com/)
+  - API: [https://status.gitlab.com/api/v2/status.json](https://status.gitlab.com/api/v2/status.json)
   - Quick check:
-    - curl -s https://status.gitlab.com/api/v2/status.json | jq -r '.status.description'
+
+    ```zsh
+    curl -s https://status.gitlab.com/api/v2/status.json | jq -r '.status.description'
+    ```
 
 - Bitbucket / Atlassian
-  - Status page: https://bitbucket.status.atlassian.com/
-  - Atlassian status hub: https://status.atlassian.com/
+  - Status page: [https://bitbucket.status.atlassian.com/](https://bitbucket.status.atlassian.com/)
+  - Atlassian status hub: [https://status.atlassian.com/](https://status.atlassian.com/)
   - Many Atlassian pages provide a Statuspage API under `/api/v2/`
 
 ## CI / CD / Build
 
 - CircleCI
-  - https://status.circleci.com/
-  - API: https://status.circleci.com/api/v2/summary.json
+  - [https://status.circleci.com/](https://status.circleci.com/)
+  - API: [https://status.circleci.com/api/v2/summary.json](https://status.circleci.com/api/v2/summary.json)
 
 - Travis CI (legacy)
-  - https://www.traviscistatus.com/
+  - [https://www.traviscistatus.com/](https://www.traviscistatus.com/)
 
 - GitHub Actions uses GitHub status (see above)
 
 ## Cloud providers & Platform
 
 - AWS (global)
-  - Service Health Dashboard (public): https://status.aws.amazon.com/
-  - Personal/Account Health: https://health.aws.amazon.com/ (requires login)
+  - Service Health Dashboard (public): [https://status.aws.amazon.com/](https://status.aws.amazon.com/)
+  - Personal/Account Health: [https://health.aws.amazon.com/](https://health.aws.amazon.com/) (requires login)
   - Tip: AWS doesn't provide a single simple JSON endpoint for all services publicly; prefer the dashboard or region-specific RSS/API.
 
 - Google Cloud
-  - Status page: https://status.cloud.google.com/
+  - Status page: [https://status.cloud.google.com/](https://status.cloud.google.com/)
   - JSON endpoints for specific components are reachable from that UI; many GCP services have region filters.
 
 - Microsoft Azure
-  - Status: https://status.azure.com/en-us/status
+  - Status: [https://status.azure.com/en-us/status](https://status.azure.com/en-us/status)
   - Azure Service Health in portal gives subscription-scoped info.
 
 ## Hosting, CDN & Edge
 
 - Cloudflare
-  - https://www.cloudflarestatus.com/
-  - API: https://www.cloudflarestatus.com/api/v2/summary.json
+  - [https://www.cloudflarestatus.com/](https://www.cloudflarestatus.com/)
+  - API: [https://www.cloudflarestatus.com/api/v2/summary.json](https://www.cloudflarestatus.com/api/v2/summary.json)
 
 - Fastly
-  - https://status.fastly.com/
+  - [https://status.fastly.com/](https://status.fastly.com/)
 
 - Akamai
-  - https://status.akamai.com/
+  - [https://status.akamai.com/](https://status.akamai.com/)
 
 - Netlify
-  - https://www.netlifystatus.com/
+  - [https://www.netlifystatus.com/](https://www.netlifystatus.com/)
 
 - Vercel
-  - https://www.vercel-status.com/
+  - [https://www.vercel-status.com/](https://www.vercel-status.com/)
 
 ## Registries & Package Managers
 
 - Docker Hub
-  - https://status.docker.com/
+  - [https://status.docker.com/](https://status.docker.com/)
 
 - npm
-  - https://status.npmjs.org/
+  - [https://status.npmjs.org/](https://status.npmjs.org/)
 
 - PyPI
-  - https://status.python.org/
+  - [https://status.python.org/](https://status.python.org/)
 
 ## Databases & Managed DBs
 
 - MongoDB Atlas
-  - https://status.cloud.mongodb.com/
+  - [https://status.cloud.mongodb.com/](https://status.cloud.mongodb.com/)
 
 - Redis (Redis Labs)
-  - https://status.redislabs.com/
+  - [https://status.redislabs.com/](https://status.redislabs.com/)
 
 - PostgreSQL / Managed (examples)
-  - Heroku Postgres: https://status.heroku.com/
+  - Heroku Postgres: [https://status.heroku.com/](https://status.heroku.com/)
 
 ## Observability & Alerts
 
 - Sentry
-  - https://status.sentry.io/
+  - [https://status.sentry.io/](https://status.sentry.io/)
 
 - Datadog
-  - https://status.datadoghq.com/
+  - [https://status.datadoghq.com/](https://status.datadoghq.com/)
 
 - PagerDuty
-  - https://status.pagerduty.com/
+  - [https://status.pagerduty.com/](https://status.pagerduty.com/)
 
 ## Payments and APIs
 
 - Stripe
-  - https://status.stripe.com/
+  - [https://status.stripe.com/](https://status.stripe.com/)
 
 - Twilio
-  - https://status.twilio.com/
+  - [https://status.twilio.com/](https://status.twilio.com/)
 
 ## CDNs, Edge and DDoS protection
 

@@ -23,7 +23,7 @@ email: nabinsademba@gmail.com
 description: >-
   Journal entries, build notes, and experiments from whatever I'm tinkering with next.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://sademban.github.io" # your GitHub Pages URL
 twitter_username: madbios9
 github_username:  sademban
 author: sademban
@@ -32,6 +32,7 @@ author: sademban
 theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.

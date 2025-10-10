@@ -1,0 +1,15 @@
+# robots.txt for sademban.github.io
+# Allow all web crawlers to access all content
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://sademban.github.io/sitemap.xml
+
+# Optional: Disallow crawling of specific paths (uncomment if needed)
+# Disallow: /assets/
+# Disallow: /_site/
+
+# Crawl-delay for polite crawling (optional)
+# Crawl-delay: 1

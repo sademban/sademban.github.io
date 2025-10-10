@@ -11,6 +11,6 @@ tags:
   - organization
 ---
 
-Laid down a new structure for posts and their accompanying assets. Every section now gets a predictable year/month/slug home, with matching folders under ssets/ for screenshots, diagrams, or downloads.
+Laid down a new structure for posts and their accompanying assets. Every section now gets a predictable year/month/slug home, with matching folders under `assets/` for screenshots, diagrams, or downloads.
 
 Documented the conventions in the repo README so collaborators can follow the pattern without second guessing.

@@ -196,5 +196,3 @@ Keep this post as a quick reference. If you want, I can:
 - add a small `scripts/healthcheck.sh` that runs a chosen subset of checks and returns non-zero on failure,
 - add GitHub Actions workflow to ping these endpoints and post a digest to Slack, or
 - create a single-page status dashboard inside the repo that aggregates these APIs for your team.
-
-Which of those would you like next? I can prepare the script or the GitHub Action for you.

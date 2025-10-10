@@ -1,0 +1,78 @@
+/* Footer Styles */
+.site-footer {
+  background-color: #151515;
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding: 20px 0;
+  color: #a9a9a9;
+  font-size: 14px;
+}
+
+.site-footer .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left .copyright {
+  margin: 0;
+  color: #a9a9a9;
+}
+
+.footer-right {
+  margin-left: auto;
+}
+
+.rss-subscribe {
+  display: flex;
+  align-items: center;
+}
+
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #63c0f5;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid #63c0f5;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.rss-link:hover {
+  background-color: #63c0f5;
+  color: #151515;
+  text-decoration: none;
+}
+
+.rss-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .footer-right {
+    margin-left: 0;
+  }
+  
+  .footer-left .copyright {
+    margin-bottom: 0;
+  }
+}

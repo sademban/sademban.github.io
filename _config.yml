@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+﻿# Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
@@ -54,12 +54,6 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-jekyll-archives:
-  enabled:
-    - tags
-  layout: tag
-  permalinks:
-    tag: /tags/:name/
 
 github:
   metadata: false
@@ -72,4 +66,5 @@ adsense_auto_load: true
 # Google Tag Manager container ID. Set to your container to enable GTM snippets.
 gtm_id: "GTM-TKW9MKG3"
 ga4_id: "G-NHJGEGME7G"
+
 

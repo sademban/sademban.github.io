@@ -4,28 +4,43 @@ title: Uses
 permalink: /uses/
 ---
 
-## Hardware
+This is the current compute and infrastructure setup behind my workbench.
 
-- **Laptop:** Model, specs, and why it fits your workflow.
-- **Peripherals:** Keyboard, pointing device, and display setup.
-- **Audio / Video:** Microphone, headphones, and camera for calls or recording.
+## Core System
 
-## Dev Environment
+- **Model:** Custom-built AI server with dual NVIDIA A100 80GB GPUs.
+- **CPU:** 2x Intel Xeon Gold 6338, for a total of 64 cores and 128 threads.
+- **GPU:** 2x NVIDIA A100 80GB.
+- **Memory:** 512GB DDR4 ECC.
+- **Storage:** 8TB NVMe SSD in RAID1 for primary storage, plus 20TB HDD for backup.
+- **Network:** Dual-port 10GbE.
+- **Power Supply:** 2000W 80 Plus Platinum in a redundant configuration.
+- **Cooling:** High-efficiency airflow system.
+- **OS:** Ubuntu Server 22.04 LTS.
 
-- **Editor / IDE:** Theme, plugins, or dotfiles that shape your daily work.
-- **Terminal:** Shell, prompt, and any must-have CLI tools.
-- **Containers & Cloud:** Note the platforms or services you use to ship code.
+## Rack And Power
 
-## Productivity Stack
+- **Rack:** 19-inch standard rack, 600mm x 1000mm x 2000mm.
+- **Rack Accessories:** Power distribution unit and lockable dustproof panel.
+- **UPS:** 5kVA lithium-ion UPS in a redundant configuration.
+- **Battery Runtime:** Around 10 to 15 minutes, enough for emergency shutdown protection.
+- **Electrical Work:** Dedicated 200V three-phase power installation with an additional power distribution panel and dedicated outlets.
 
-- **Task Management:** Tools for planning sprints, habits, or personal todos.
-- **Notes & Knowledge:** Where you capture research, snippets, or ideas.
-- **Automation:** Any scripts or shortcuts that save you time.
+## Networking
 
-## Creative & Life
+- **Switching:** 24-port 10GbE switch.
+- **Cabling:** 10GbE fiber optic cabling.
 
-- **Design:** Color pickers, prototyping tools, or asset libraries.
-- **Wellness:** Apps or gear that help with sleep, workouts, or mindfulness.
-- **Reading & Listening:** Newsletters, podcasts, or playlists on repeat lately.
+## Cooling And Noise Control
 
-Keep this page current by revisiting it every few months and pruning anything you no longer rely on.
+- **Air Conditioning:** Floor-standing precision AC unit rated at 6.0 kW (20,000 BTU/h).
+- **Operating Range:** Maintained between 18 and 25 degrees C.
+- **Duty Cycle:** Designed for 24/7 continuous operation.
+- **Noise Reduction:** Soundproof panels rated for roughly 35 to 40 dB noise reduction.
+- **Vibration Control:** Anti-vibration floor mats and a vibration-reducing rack mount with rubber padding.
+- **Flooring:** Waterproof flooring with an integrated drainage system.
+
+## Safety
+
+- **Fire Protection:** Automatic gas fire suppression system.
+- **Room Protection:** Fire-resistant coating on the server room walls.

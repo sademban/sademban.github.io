@@ -1,0 +1,49 @@
+name: Daily research-based blog draft
+
+on:
+  schedule:
+    # 08:05 Asia/Tokyo every day.
+    - cron: "5 23 * * *"
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Optional tracker slug to draft"
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5' }}
+      BLOG_SLUG: ${{ github.event.inputs.slug }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Generate one draft from research
+        if: env.OPENAI_API_KEY != ''
+        run: ruby scripts/generate_blog_draft.rb
+
+      - name: Commit generated draft
+        if: env.OPENAI_API_KEY != ''
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add content-ops/tracker.yml content-ops/drafts
+            git commit -m "Draft researched blog post"
+            git push
+          else
+            echo "No draft changes to commit."
+          fi

@@ -1,0 +1,79 @@
+- slug: docker-image-audit-with-dive
+  title: "How to audit Docker image bloat with dive and buildx"
+  status: idea
+  publish_after: 2026-06-03
+  category: blog
+  format: tutorial
+  description: "A practical guide for finding unnecessary Docker image layers and proving size reductions with repeatable commands."
+  tags:
+    - docker
+    - performance
+    - developer-experience
+  draft_path: content-ops/drafts/docker-image-audit-with-dive.markdown
+  image_plan:
+    type: generated
+    path: assets/posts/blog/2026/06/docker-image-audit-with-dive/featured-image.png
+    alt: "Illustration of Docker image layers being inspected for unnecessary size"
+    caption: "Auditing Docker image layers before optimizing the build."
+  basis:
+    - "Official Docker build documentation."
+    - "Local before/after image size output."
+  source_urls:
+    - "https://docs.docker.com/build/"
+  notes: "Approve only after adding real command output and a Sources or Evidence section to the draft."
+
+- slug: shell-healthcheck-toolkit
+  title: "A small shell toolkit for service health checks"
+  status: idea
+  publish_after: 2026-06-04
+  category: blog
+  format: reference
+  description: "Reusable curl and jq patterns for checking common service status APIs before debugging your own deploy."
+  tags:
+    - monitoring
+    - reliability
+    - productivity
+  draft_path: content-ops/drafts/shell-healthcheck-toolkit.markdown
+  image_plan:
+    type: generated
+    path: assets/posts/blog/2026/06/shell-healthcheck-toolkit/featured-image.png
+    alt: "Illustration of a terminal checking service health statuses"
+    caption: "Small command-line checks can quickly separate provider outages from local deploy issues."
+  basis:
+    - "Official provider status APIs."
+    - "Commands tested locally before approval."
+  source_urls:
+    - "https://www.githubstatus.com/api/v2/status.json"
+    - "https://www.cloudflarestatus.com/api/v2/summary.json"
+  notes: "Good follow-up to the existing service health checks post."
+
+- slug: docker-desktop-vs-engine-linux-contexts
+  title: "Docker Desktop vs Docker Engine on Linux: why your volumes and containers appear in different places"
+  status: published
+  publish_after: 2026-06-02
+  published_at: 2026-06-02
+  published_path: _posts/blog/2026/06/2026-06-02-docker-desktop-vs-engine-linux-contexts.markdown
+  category: blog
+  format: debugging-guide
+  description: "A simple explanation of Docker contexts on Linux, why Docker Desktop and Docker Engine can show different containers, images, and volumes, and the commands to verify which daemon you are using."
+  tags:
+    - docker
+    - linux
+    - developer-experience
+  research_path: content-ops/research/docker-desktop-vs-engine-linux-contexts.md
+  draft_path: content-ops/drafts/docker-desktop-vs-engine-linux-contexts.markdown
+  image_plan:
+    type: generated
+    path: assets/posts/blog/2026/06/docker-desktop-vs-engine-linux-contexts/featured-image.png
+    alt: "Illustration of two Docker contexts pointing to separate container storage locations"
+    caption: "Docker Desktop and Docker Engine can point the same CLI at different daemons."
+  basis:
+    - "Docker Desktop for Linux documentation says it runs a VM and uses the desktop-linux context."
+    - "Docker context documentation explains that the active context decides which daemon the CLI talks to."
+    - "Local Docker CLI context commands showed separate default and desktop-linux endpoints."
+  source_urls:
+    - "https://docs.docker.com/desktop/setup/install/linux/"
+    - "https://docs.docker.com/engine/context/working-with-contexts/"
+    - "https://docs.docker.com/desktop/faqs/linuxfaqs/"
+    - "https://docs.docker.com/desktop/features/networking/"
+  notes: "Published after review from primary Docker docs plus local context checks."

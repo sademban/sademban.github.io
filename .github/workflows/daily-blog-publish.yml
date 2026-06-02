@@ -1,0 +1,42 @@
+name: Daily approved blog publish
+
+on:
+  schedule:
+    # 09:05 Asia/Tokyo every day.
+    - cron: "5 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Publish one approved post
+        run: ruby scripts/publish_approved_post.rb
+
+      - name: Build site
+        run: bundle exec jekyll build
+
+      - name: Commit published post
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add content-ops/tracker.yml _posts tags
+            git commit -m "Publish approved blog post"
+            git push
+          else
+            echo "No approved post was ready to publish."
+          fi
+

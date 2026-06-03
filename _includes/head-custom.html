@@ -7,6 +7,7 @@
     })(window, document, "clarity", "script", "wqdtjdnnx8");
 </script>
 <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 {%- if site.gtm_id and site.gtm_id != "" -%}
 <script>
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -33,7 +34,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="description" content="{{ meta_description | strip_newlines | strip | escape }}">
 <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
 <meta property="og:description" content="{{ meta_description | strip_newlines | strip | escape }}">
-<meta property="og:type" content="{{ page.layout == 'post' or page.collection == 'posts' ? 'article' : 'website' }}">
+{%- if page.layout == 'post' or page.collection == 'posts' -%}
+  {%- assign og_type = 'article' -%}
+{%- else -%}
+  {%- assign og_type = 'website' -%}
+{%- endif -%}
+<meta property="og:type" content="{{ og_type }}">
 <meta property="og:url" content="{{ page.url | relative_url | absolute_url }}">
 {%- if page.image -%}
 <meta property="og:image" content="{{ page.image | relative_url | absolute_url }}">

@@ -13,7 +13,8 @@ layout: default
   {%- assign posts_to_show = posts_to_show | where_exp: "post", "post.path contains page.path_contains" -%}
 {%- endif -%}
 
-{%- assign date_format = site.minima.date_format | default: "%b %d, %Y" -%}
+{%- assign date_format = page.timeline_date_format | default: "%b %d" -%}
+{%- assign posts_by_year = posts_to_show | sort: "date" | reverse | group_by_exp: "post", "post.date | date: '%Y'" -%}
 
 <article class="post-archive">
   {%- if page.title -%}
@@ -26,17 +27,25 @@ layout: default
   {%- endif -%}
 
   {%- if posts_to_show and posts_to_show != empty -%}
-  <ul class="post-list archive-list">
-    {%- for post in posts_to_show -%}
-    <li class="archive-item">
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
-      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      {%- if page.show_excerpts -%}
-        <div class="post-excerpt">{{ post.excerpt }}</div>
-      {%- endif -%}
-    </li>
+    {%- for year in posts_by_year -%}
+      <h2 class="writing-year">{{ year.name }}</h2>
+      <ul class="writing-list archive-list">
+        {%- assign yearly_posts = year.items | sort: "date" | reverse -%}
+        {%- for post in yearly_posts -%}
+          <li class="writing-entry archive-item">
+            <span class="writing-date">{{ post.date | date: date_format }}</span>
+            <span class="writing-item">
+              <a class="writing-link post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+              {%- if post.path contains '/journal/' and page.title != 'Journal' -%}
+                <a class="content-type-badge content-type-badge--journal" href="{{ '/journal/' | relative_url }}">journal</a>
+              {%- elsif post.path contains '/home/' -%}
+                <span class="content-type-badge content-type-badge--note">note</span>
+              {%- endif -%}
+            </span>
+          </li>
+        {%- endfor -%}
+      </ul>
     {%- endfor -%}
-  </ul>
   {%- else -%}
     <p class="empty-archive">No posts found here yet. Check back soon.</p>
   {%- endif -%}

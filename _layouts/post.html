@@ -15,14 +15,17 @@ layout: default
   {%- assign post_tags = page.categories -%}
 {%- endif -%}
 
-<small>{{ page.date | date: "%-d %B %Y" }}</small>
-<h1>{{ page.title }}</h1>
+<article class="post-page">
+<header class="post-header">
+  <p class="post-date">{{ page.date | date: "%-d %B %Y" }}</p>
+  <h1>{{ page.title }}</h1>
 
 {%- if post_author_name -%}
-<p class="view">by {{ post_author_name }}</p>
+  <p class="post-author">by {{ post_author_name }}</p>
 {%- endif -%}
+</header>
 
-{%- if page.image -%}
+{%- if page.image and page.show_hero_image == true -%}
 <figure class="post-hero">
   <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" />
   {%- if page.image_caption -%}
@@ -31,8 +34,17 @@ layout: default
 </figure>
 {%- endif -%}
 
+<div class="post-body">
 {{ content }}
+</div>
 
 {%- if post_tags and post_tags != empty -%}
-  <small>tags: <em>{{ post_tags | join: "</em> - <em>" }}</em></small>
+  <footer class="post-tags" aria-label="Post tags">
+    <span>tags:</span>
+    {%- for tag in post_tags -%}
+      {%- assign tag_slug = tag | slugify -%}
+      <a href="{{ '/tags/' | append: tag_slug | append: '/' | relative_url }}">{{ tag }}</a>
+    {%- endfor -%}
+  </footer>
 {%- endif -%}
+</article>

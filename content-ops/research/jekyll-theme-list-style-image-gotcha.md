@@ -79,29 +79,28 @@ When a Jekyll theme marker will not go away, inspect the compiled theme CSS firs
 
 Image type:
 
-- [ ] Generated featured image
+- [x] Generated featured image
 - [ ] Real screenshot/demo image
-- [x] No image needed
+- [ ] No image needed
 
 Prompt or screenshot plan:
 
-- No image. This is a short text-first debugging note.
+- Original social preview illustration showing an old image marker being replaced by a normal clean bullet. No readable text, no logos, no fake terminal output.
 
 Asset path:
 
-- None.
+- `assets/posts/blog/2026/06/jekyll-theme-list-style-image-gotcha/featured-image.png`
 
 Alt text:
 
-- None.
+- Illustration of a CSS list marker being replaced with a normal bullet style.
 
 Caption:
 
-- None.
+- The visible marker came from list-style-image, not a pseudo-element.
 
 ## Security Review
 
 - [x] No API keys, tokens, passwords, private keys, cookies, or auth headers.
 - [x] No private customer data or internal-only infrastructure details.
 - [x] Logs, screenshots, and copied outputs are redacted.
-

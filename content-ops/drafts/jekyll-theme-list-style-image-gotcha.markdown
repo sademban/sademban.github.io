@@ -9,6 +9,9 @@ tags:
   - jekyll
   - css
   - developer-experience
+image: /assets/posts/blog/2026/06/jekyll-theme-list-style-image-gotcha/featured-image.png
+image_alt: "Illustration of a CSS list marker being replaced with a normal bullet style"
+image_caption: "The visible marker came from list-style-image, not a pseudo-element."
 ---
 
 ## 🧹 When a Jekyll theme keeps showing weird list bullets

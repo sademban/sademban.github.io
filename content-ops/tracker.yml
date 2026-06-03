@@ -94,10 +94,10 @@
   research_path: content-ops/research/jekyll-theme-list-style-image-gotcha.md
   draft_path: content-ops/drafts/jekyll-theme-list-style-image-gotcha.markdown
   image_plan:
-    type: none
-    path:
-    alt:
-    caption:
+    type: generated
+    path: assets/posts/blog/2026/06/jekyll-theme-list-style-image-gotcha/featured-image.png
+    alt: "Illustration of a CSS list marker being replaced with a normal bullet style"
+    caption: "The visible marker came from list-style-image, not a pseudo-element."
   basis:
     - "Local Jekyll theme CSS showed the marker came from list-style-image, not ::before."
     - "MDN documents list-style-image as the property for image-based list markers."
@@ -106,4 +106,4 @@
     - "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/list-style-image"
     - "https://jekyllrb.com/docs/themes/"
     - "https://jekyllrb.com/docs/assets/"
-  notes: "Published from the site redesign debugging session. No featured image needed."
+  notes: "Published from the site redesign debugging session. OG image added for social previews."

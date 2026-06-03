@@ -77,3 +77,33 @@
     - "https://docs.docker.com/desktop/faqs/linuxfaqs/"
     - "https://docs.docker.com/desktop/features/networking/"
   notes: "Published after review from primary Docker docs plus local context checks."
+
+- slug: jekyll-theme-list-style-image-gotcha
+  title: "When a Jekyll theme keeps showing weird list bullets"
+  status: published
+  publish_after: 2026-06-03
+  published_at: 2026-06-03
+  published_path: _posts/blog/2026/06/2026-06-03-jekyll-theme-list-style-image-gotcha.markdown
+  category: blog
+  format: debugging-guide
+  description: "A short debugging note about removing inherited Jekyll theme list markers when overriding pseudo-elements does not work."
+  tags:
+    - jekyll
+    - css
+    - developer-experience
+  research_path: content-ops/research/jekyll-theme-list-style-image-gotcha.md
+  draft_path: content-ops/drafts/jekyll-theme-list-style-image-gotcha.markdown
+  image_plan:
+    type: none
+    path:
+    alt:
+    caption:
+  basis:
+    - "Local Jekyll theme CSS showed the marker came from list-style-image, not ::before."
+    - "MDN documents list-style-image as the property for image-based list markers."
+    - "Jekyll docs explain that gem-based theme files and assets can be overridden by site files."
+  source_urls:
+    - "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/list-style-image"
+    - "https://jekyllrb.com/docs/themes/"
+    - "https://jekyllrb.com/docs/assets/"
+  notes: "Published from the site redesign debugging session. No featured image needed."

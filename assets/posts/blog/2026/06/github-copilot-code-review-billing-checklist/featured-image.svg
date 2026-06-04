@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Code review checklist and usage gauge</title>
+  <desc id="desc">Abstract open graph image showing a code review panel, checklist marks, and a usage budget gauge.</desc>
+  <rect width="1200" height="630" fill="#151b23"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#grid)" opacity="0.22"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#8bd8ff" stroke-width="1" opacity="0.25"/>
+    </pattern>
+    <linearGradient id="panel" x1="180" x2="1020" y1="110" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#202938"/>
+      <stop offset="1" stop-color="#101722"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop stop-color="#9dff4f"/>
+      <stop offset="1" stop-color="#6fd6ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="142" y="92" width="916" height="446" rx="28" fill="url(#panel)" stroke="#38465a" stroke-width="2"/>
+  <rect x="178" y="130" width="520" height="308" rx="18" fill="#0e141d" stroke="#2e3b4e"/>
+  <circle cx="210" cy="162" r="8" fill="#ff6b6b"/>
+  <circle cx="236" cy="162" r="8" fill="#ffd166"/>
+  <circle cx="262" cy="162" r="8" fill="#9dff4f"/>
+  <rect x="214" y="210" width="330" height="18" rx="9" fill="#6fd6ff" opacity="0.55"/>
+  <rect x="214" y="258" width="410" height="14" rx="7" fill="#ffffff" opacity="0.18"/>
+  <rect x="214" y="292" width="360" height="14" rx="7" fill="#ffffff" opacity="0.18"/>
+  <rect x="214" y="326" width="428" height="14" rx="7" fill="#ffffff" opacity="0.18"/>
+  <path d="M222 386 l22 22 46 -58" fill="none" stroke="#9dff4f" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="324" y="380" width="250" height="18" rx="9" fill="#9dff4f" opacity="0.5"/>
+  <rect x="748" y="152" width="218" height="218" rx="109" fill="#0e141d" stroke="#314157" stroke-width="2"/>
+  <path d="M790 302 A78 78 0 0 1 925 220" fill="none" stroke="#9dff4f" stroke-width="24" stroke-linecap="round"/>
+  <path d="M925 220 A78 78 0 0 1 930 305" fill="none" stroke="#ffd166" stroke-width="24" stroke-linecap="round"/>
+  <path d="M858 262 L910 226" stroke="#6fd6ff" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="858" cy="262" r="13" fill="#6fd6ff"/>
+  <rect x="744" y="410" width="250" height="34" rx="17" fill="#ffffff" opacity="0.12"/>
+  <rect x="744" y="464" width="180" height="22" rx="11" fill="url(#accent)" opacity="0.72"/>
+  <rect x="930" y="464" width="64" height="22" rx="11" fill="#ffffff" opacity="0.16"/>
+  <path d="M140 540 C280 485 405 582 560 532 S850 458 1062 530" fill="none" stroke="#6fd6ff" stroke-width="2" opacity="0.25"/>
+</svg>

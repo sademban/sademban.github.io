@@ -1,141 +1,207 @@
+---
 - slug: docker-image-audit-with-dive
-  title: "How to audit Docker image bloat with dive and buildx"
+  title: How to audit Docker image bloat with dive and buildx
   status: idea
   publish_after: 2026-06-03
   category: blog
   format: tutorial
-  description: "A practical guide for finding unnecessary Docker image layers and proving size reductions with repeatable commands."
+  description: A practical guide for finding unnecessary Docker image layers and proving
+    size reductions with repeatable commands.
   tags:
-    - docker
-    - performance
-    - developer-experience
+  - docker
+  - performance
+  - developer-experience
   draft_path: content-ops/drafts/docker-image-audit-with-dive.markdown
   image_plan:
     type: generated
     path: assets/posts/blog/2026/06/docker-image-audit-with-dive/featured-image.png
-    alt: "Illustration of Docker image layers being inspected for unnecessary size"
-    caption: "Auditing Docker image layers before optimizing the build."
+    alt: Illustration of Docker image layers being inspected for unnecessary size
+    caption: Auditing Docker image layers before optimizing the build.
   basis:
-    - "Official Docker build documentation."
-    - "Local before/after image size output."
+  - Official Docker build documentation.
+  - Local before/after image size output.
   source_urls:
-    - "https://docs.docker.com/build/"
-  notes: "Approve only after adding real command output and a Sources or Evidence section to the draft."
-
+  - https://docs.docker.com/build/
+  notes: Approve only after adding real command output and a Sources or Evidence section
+    to the draft.
 - slug: shell-healthcheck-toolkit
-  title: "A small shell toolkit for service health checks"
+  title: A small shell toolkit for service health checks
   status: idea
   publish_after: 2026-06-04
   category: blog
   format: reference
-  description: "Reusable curl and jq patterns for checking common service status APIs before debugging your own deploy."
+  description: Reusable curl and jq patterns for checking common service status APIs
+    before debugging your own deploy.
   tags:
-    - monitoring
-    - reliability
-    - productivity
+  - monitoring
+  - reliability
+  - productivity
   draft_path: content-ops/drafts/shell-healthcheck-toolkit.markdown
   image_plan:
     type: generated
     path: assets/posts/blog/2026/06/shell-healthcheck-toolkit/featured-image.png
-    alt: "Illustration of a terminal checking service health statuses"
-    caption: "Small command-line checks can quickly separate provider outages from local deploy issues."
+    alt: Illustration of a terminal checking service health statuses
+    caption: Small command-line checks can quickly separate provider outages from
+      local deploy issues.
   basis:
-    - "Official provider status APIs."
-    - "Commands tested locally before approval."
+  - Official provider status APIs.
+  - Commands tested locally before approval.
   source_urls:
-    - "https://www.githubstatus.com/api/v2/status.json"
-    - "https://www.cloudflarestatus.com/api/v2/summary.json"
-  notes: "Good follow-up to the existing service health checks post."
-
+  - https://www.githubstatus.com/api/v2/status.json
+  - https://www.cloudflarestatus.com/api/v2/summary.json
+  notes: Good follow-up to the existing service health checks post.
 - slug: docker-desktop-vs-engine-linux-contexts
-  title: "Docker Desktop vs Docker Engine on Linux: why your volumes and containers appear in different places"
+  title: 'Docker Desktop vs Docker Engine on Linux: why your volumes and containers
+    appear in different places'
   status: published
   publish_after: 2026-06-02
   published_at: 2026-06-02
   published_path: _posts/blog/2026/06/2026-06-02-docker-desktop-vs-engine-linux-contexts.markdown
   category: blog
   format: debugging-guide
-  description: "A simple explanation of Docker contexts on Linux, why Docker Desktop and Docker Engine can show different containers, images, and volumes, and the commands to verify which daemon you are using."
+  description: A simple explanation of Docker contexts on Linux, why Docker Desktop
+    and Docker Engine can show different containers, images, and volumes, and the
+    commands to verify which daemon you are using.
   tags:
-    - docker
-    - linux
-    - developer-experience
+  - docker
+  - linux
+  - developer-experience
   research_path: content-ops/research/docker-desktop-vs-engine-linux-contexts.md
   draft_path: content-ops/drafts/docker-desktop-vs-engine-linux-contexts.markdown
   image_plan:
     type: generated
     path: assets/posts/blog/2026/06/docker-desktop-vs-engine-linux-contexts/featured-image.png
-    alt: "Illustration of two Docker contexts pointing to separate container storage locations"
-    caption: "Docker Desktop and Docker Engine can point the same CLI at different daemons."
+    alt: Illustration of two Docker contexts pointing to separate container storage
+      locations
+    caption: Docker Desktop and Docker Engine can point the same CLI at different
+      daemons.
   basis:
-    - "Docker Desktop for Linux documentation says it runs a VM and uses the desktop-linux context."
-    - "Docker context documentation explains that the active context decides which daemon the CLI talks to."
-    - "Local Docker CLI context commands showed separate default and desktop-linux endpoints."
+  - Docker Desktop for Linux documentation says it runs a VM and uses the desktop-linux
+    context.
+  - Docker context documentation explains that the active context decides which daemon
+    the CLI talks to.
+  - Local Docker CLI context commands showed separate default and desktop-linux endpoints.
   source_urls:
-    - "https://docs.docker.com/desktop/setup/install/linux/"
-    - "https://docs.docker.com/engine/context/working-with-contexts/"
-    - "https://docs.docker.com/desktop/faqs/linuxfaqs/"
-    - "https://docs.docker.com/desktop/features/networking/"
-  notes: "Published after review from primary Docker docs plus local context checks."
-
+  - https://docs.docker.com/desktop/setup/install/linux/
+  - https://docs.docker.com/engine/context/working-with-contexts/
+  - https://docs.docker.com/desktop/faqs/linuxfaqs/
+  - https://docs.docker.com/desktop/features/networking/
+  notes: Published after review from primary Docker docs plus local context checks.
 - slug: jekyll-theme-list-style-image-gotcha
-  title: "When a Jekyll theme keeps showing weird list bullets"
+  title: When a Jekyll theme keeps showing weird list bullets
   status: published
   publish_after: 2026-06-03
   published_at: 2026-06-03
   published_path: _posts/blog/2026/06/2026-06-03-jekyll-theme-list-style-image-gotcha.markdown
   category: blog
   format: debugging-guide
-  description: "A short debugging note about removing inherited Jekyll theme list markers when overriding pseudo-elements does not work."
+  description: A short debugging note about removing inherited Jekyll theme list markers
+    when overriding pseudo-elements does not work.
   tags:
-    - jekyll
-    - css
-    - developer-experience
+  - jekyll
+  - css
+  - developer-experience
   research_path: content-ops/research/jekyll-theme-list-style-image-gotcha.md
   draft_path: content-ops/drafts/jekyll-theme-list-style-image-gotcha.markdown
   image_plan:
     type: generated
     path: assets/posts/blog/2026/06/jekyll-theme-list-style-image-gotcha/featured-image.png
-    alt: "Illustration of a CSS list marker being replaced with a normal bullet style"
-    caption: "The visible marker came from list-style-image, not a pseudo-element."
+    alt: Illustration of a CSS list marker being replaced with a normal bullet style
+    caption: The visible marker came from list-style-image, not a pseudo-element.
   basis:
-    - "Local Jekyll theme CSS showed the marker came from list-style-image, not ::before."
-    - "MDN documents list-style-image as the property for image-based list markers."
-    - "Jekyll docs explain that gem-based theme files and assets can be overridden by site files."
+  - Local Jekyll theme CSS showed the marker came from list-style-image, not ::before.
+  - MDN documents list-style-image as the property for image-based list markers.
+  - Jekyll docs explain that gem-based theme files and assets can be overridden by
+    site files.
   source_urls:
-    - "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/list-style-image"
-    - "https://jekyllrb.com/docs/themes/"
-    - "https://jekyllrb.com/docs/assets/"
-  notes: "Published from the site redesign debugging session. OG image added for social previews."
-
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/list-style-image
+  - https://jekyllrb.com/docs/themes/
+  - https://jekyllrb.com/docs/assets/
+  notes: Published from the site redesign debugging session. OG image added for social
+    previews.
 - slug: github-copilot-code-review-billing-checklist
-  title: "Copilot code review on private repos: check the bill before you automate it"
+  title: 'Copilot code review on private repos: check the bill before you automate
+    it'
   status: drafted
   publish_after: 2026-06-04
   published_path: _posts/blog/2026/06/2026-06-04-github-copilot-code-review-billing-checklist.markdown
   category: blog
   format: checklist
-  description: "GitHub Copilot code review can now touch both AI Credits and Actions minutes on private repositories. Here is the simple rollout check I would do first."
+  description: GitHub Copilot code review can now touch both AI Credits and Actions
+    minutes on private repositories. Here is the simple rollout check I would do first.
   tags:
-    - github
-    - copilot
-    - github-actions
-    - developer-experience
+  - github
+  - copilot
+  - github-actions
+  - developer-experience
   research_path: content-ops/research/github-copilot-code-review-billing-checklist.md
   draft_path: content-ops/drafts/github-copilot-code-review-billing-checklist.markdown
   image_plan:
     type: generated
     path: assets/posts/blog/2026/06/github-copilot-code-review-billing-checklist/featured-image.svg
-    alt: "Abstract code review checklist beside a usage budget gauge"
-    caption: "Copilot code review is useful, but private repositories need usage guardrails."
+    alt: Abstract code review checklist beside a usage budget gauge
+    caption: Copilot code review is useful, but private repositories need usage guardrails.
   basis:
-    - "GitHub changelog says Copilot code review started consuming Actions minutes on June 1, 2026 for private repositories."
-    - "GitHub June 1 billing update says Copilot usage-based billing is active and code review consumes Actions minutes in addition to AI Credits."
-    - "GitHub docs explain code reviews have AI Credits and Actions minute cost components, and recommend piloting automatic review on a small repository set."
+  - GitHub changelog says Copilot code review started consuming Actions minutes on
+    June 1, 2026 for private repositories.
+  - GitHub June 1 billing update says Copilot usage-based billing is active and code
+    review consumes Actions minutes in addition to AI Credits.
+  - GitHub docs explain code reviews have AI Credits and Actions minute cost components,
+    and recommend piloting automatic review on a small repository set.
   source_urls:
-    - "https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/"
-    - "https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans/"
-    - "https://docs.github.com/en/copilot/concepts/agents/code-review"
-    - "https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/enable-copilot-code-review"
-    - "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/"
-  notes: "Drafted from official GitHub sources after daily.dev, DEV, and Medium topic scanning. Does not claim paid billing-account measurements."
+  - https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/
+  - https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans/
+  - https://docs.github.com/en/copilot/concepts/agents/code-review
+  - https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/enable-copilot-code-review
+  - https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/
+  notes: Drafted from official GitHub sources after daily.dev, DEV, and Medium topic
+    scanning. Does not claim paid billing-account measurements.
+- slug: cifswitch-cve-2026-46243
+  title: 'CIFSwitch CVE-2026-46243: patch the local-root path, then check your CIFS
+    assumptions'
+  status: published
+  publish_after: 2026-06-06
+  category: blog
+  format: checklist
+  description: CIFSwitch is a Linux local privilege escalation in the CIFS/SPNEGO
+    upcall path. Here is what is proven, what conditions matter, and what to check
+    before choosing a mitigation.
+  tags:
+  - linux
+  - security
+  research_path: content-ops/research/cifswitch-cve-2026-46243.md
+  draft_path: content-ops/drafts/cifswitch-cve-2026-46243.markdown
+  image_plan:
+    type: generated
+    path: assets/posts/blog/2026/06/cifswitch-cve-2026-46243/featured-image.png
+    alt: Abstract security illustration showing a locked boundary between local user
+      space and CIFS file sharing paths
+    caption: CIFSwitch is local, but on hosts that run untrusted code, local-to-root
+      is the line that matters.
+  basis:
+  - NVD CVE record sourced from kernel.org, checked on 2026-06-06.
+  - Upstream kernel patch adds validation for cifs.spnego key descriptions.
+  - oss-security disclosure and researcher write-up explain the local-root chain and
+    exposure conditions.
+  - Vendor and distro advisories from Red Hat, Debian, AlmaLinux, SUSE, and TrueNAS
+    were checked for operational impact.
+  source_urls:
+  - https://nvd.nist.gov/vuln/detail/CVE-2026-46243
+  - https://www.kernel.org/doc/html/latest/admin-guide/cifs/index.html
+  - https://www.kernel.org/doc/html/latest/admin-guide/cifs/usage.html
+  - https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cifs/56412e46-786f-4909-a4a1-dfcb98865f91
+  - https://manpages.debian.org/testing/cifs-utils/cifs.upcall.8.en.html
+  - https://security-tracker.debian.org/tracker/CVE-2026-46243
+  - https://sources.debian.org/patches/linux/7.0.10-1~bpo13%2B1/bugfix/all/smb-client-reject-userspace-cifs.spnego-descriptions.patch/
+  - https://www.openwall.com/lists/oss-security/2026/05/28/2
+  - https://www.openwall.com/lists/oss-security/2026/06/01/6
+  - https://heyitsas.im/posts/cifswitch/
+  - https://access.redhat.com/security/vulnerabilities/RHSB-2026-005
+  - https://almalinux.org/blog/2026-05-28-cifswitch/
+  - https://www.suse.com/security/cve/CVE-2026-46243.html
+  - https://security.truenas.com/scale/impact-statements/cifswitch/
+  notes: Draft only. OG image generated and draft humanized on 2026-06-06. Do not
+    move to approved or publish until the author reviews the claims and mitigation
+    tone.
+  published_at: '2026-06-06'
+  published_path: _posts/blog/2026/06/2026-06-06-cifswitch-cve-2026-46243.markdown

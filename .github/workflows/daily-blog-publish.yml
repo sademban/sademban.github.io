@@ -20,6 +20,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
+          ruby-version: "3.4"
           bundler-cache: true
 
       - name: Publish one approved post
@@ -39,4 +40,3 @@ jobs:
           else
             echo "No approved post was ready to publish."
           fi
-

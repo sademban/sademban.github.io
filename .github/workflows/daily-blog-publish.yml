@@ -1,9 +1,6 @@
 name: Daily approved blog publish
 
 on:
-  schedule:
-    # 09:05 Asia/Tokyo every day.
-    - cron: "5 0 * * *"
   workflow_dispatch:
 
 permissions:

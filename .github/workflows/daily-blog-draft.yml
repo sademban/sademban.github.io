@@ -1,9 +1,6 @@
 name: Daily research-based blog draft
 
 on:
-  schedule:
-    # 08:05 Asia/Tokyo every day.
-    - cron: "5 23 * * *"
   workflow_dispatch:
     inputs:
       slug:

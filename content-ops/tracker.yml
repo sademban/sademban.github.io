@@ -205,3 +205,35 @@
     tone.
   published_at: '2026-06-06'
   published_path: _posts/blog/2026/06/2026-06-06-cifswitch-cve-2026-46243.markdown
+- slug: windows-build-2026-dev-tools
+  title: "Windows Build 2026 dev tools I would actually try first"
+  status: published
+  publish_after: 2026-06-08
+  category: blog
+  format: checklist
+  description: "Build 2026 had plenty of big platform talk, but the most useful Windows developer updates are the boring ones: repeatable setup, better terminal defaults, and less machine drift."
+  tags:
+  - windows
+  - productivity
+  - developer-experience
+  research_path: content-ops/research/windows-build-2026-dev-tools.md
+  draft_path: content-ops/drafts/windows-build-2026-dev-tools.markdown
+  image_plan:
+    type: generated
+    path: assets/posts/blog/2026/06/windows-build-2026-dev-tools/featured-image.png
+    alt: "Abstract developer workstation showing a command flow into setup, code, container, and checklist panels"
+    caption: "The most useful developer tooling usually makes setup less surprising."
+  basis:
+  - Official Windows Developer Blog Build 2026 announcement.
+  - Microsoft Learn Dev Configs documentation.
+  - Microsoft developer docs for WinGet Configuration and Windows developer tooling.
+  - Local repo decision note: draft is a reading guide, not a benchmark or hands-on review.
+  source_urls:
+  - https://blogs.windows.com/windowsdeveloper/2026/06/02/build-2026-furthering-windows-as-the-trusted-platform-for-development/
+  - https://learn.microsoft.com/en-us/windows/dev-configs/
+  - https://developer.microsoft.com/windows/dev-tools/
+  - https://developer.microsoft.com/blog/winget-configuration-set-up-your-dev-machine-in-one-command
+  - https://learn.microsoft.com/en-us/windows/advanced-settings/
+  notes: Published after author approval on 2026-06-08.
+  published_at: '2026-06-08'
+  published_path: _posts/blog/2026/06/2026-06-08-windows-build-2026-dev-tools.markdown

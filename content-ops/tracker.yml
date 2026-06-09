@@ -237,3 +237,42 @@
   notes: Published after author approval on 2026-06-08.
   published_at: '2026-06-08'
   published_path: _posts/blog/2026/06/2026-06-08-windows-build-2026-dev-tools.markdown
+- slug: fukuoka-places-to-visit
+  title: "Places to visit when you are in Fukuoka"
+  status: published
+  publish_after: 2026-06-09
+  category: blog
+  format: travel-places
+  description: "Six Fukuoka places worth keeping on your map: quiet parks, old Hakata, shrine towns, sea views, and a temple just outside the city."
+  tags:
+  - travel
+  - fukuoka
+  - japan
+  research_path: content-ops/research/fukuoka-places-to-visit.md
+  draft_path: content-ops/drafts/fukuoka-places-to-visit.markdown
+  image_plan:
+    type: sourced
+    path: assets/posts/blog/2026/06/fukuoka-places-to-visit/featured-image.jpg
+    alt: "Blue sea and a white torii gate at Sakurai Futamigaura in Itoshima, Fukuoka"
+    caption: "Fukuoka is at its best when you leave room for the sea, the old town, and the quieter edges of the city."
+  basis:
+  - Official Fukuoka City tourism pages for Fukuoka Castle Ruins, Hakata Old Town, Dazaifu Tenmangu, Itoshima, and Uminonakamichi.
+  - Nanzoin official access page and Sasaguri Tourism Association for temple access and reclining Buddha details.
+  - Wikimedia Commons image pages checked for license and attribution before use.
+  source_urls:
+  - https://gofukuoka.jp/en/spots/detail/26898
+  - https://www.gofukuoka.jp/articles/detail/bc5fd2b1-e507-447c-a90f-6f0704964732
+  - https://www.gofukuoka.jp/spots/detail/26988
+  - https://gofukuoka.jp/en/articles/detail/a4699099-7a92-48ab-b4d9-3cd29ffe0af1
+  - https://www.gofukuoka.jp/spots/detail/26799
+  - https://nanzoin.net/en/access/
+  - https://sasagurikanko.com/en/type-temple/%E5%8D%97%E8%94%B5%E9%99%A2/
+  - https://commons.wikimedia.org/wiki/File:Futamigaura_in_Itoshima,_Fukuoka.jpg
+  - https://commons.wikimedia.org/wiki/File:Ohori_Park_(30681292984).jpg
+  - https://commons.wikimedia.org/wiki/File:Dazaifu_Tenman-gu_2024_September_25_various_14_58_08_101000.jpeg
+  - https://commons.wikimedia.org/wiki/File:Kushida_shrine.jpeg
+  - https://commons.wikimedia.org/wiki/File:Uminonakamichi_Seaside_Park_4-3_(26904160614).jpg
+  - https://commons.wikimedia.org/wiki/File:Bell_tower_near_Reclining_Buddha_in_Nanzoin_Temple.jpg
+  notes: Published after author approval on 2026-06-09.
+  published_at: '2026-06-09'
+  published_path: _posts/blog/2026/06/2026-06-09-fukuoka-places-to-visit.markdown

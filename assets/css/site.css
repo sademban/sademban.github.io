@@ -253,6 +253,32 @@ hr {
   margin-top: 8px;
 }
 
+.post-body .place-photo {
+  margin: 22px auto 26px;
+  max-width: 640px;
+}
+
+.post-body .place-photo img {
+  border: 1px solid var(--site-border);
+  border-radius: 6px;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.post-body .place-photo figcaption {
+  color: var(--site-muted);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+@media (max-width: 760px) {
+  .post-body .place-photo {
+    max-width: 100%;
+  }
+}
+
 .post-body ul,
 .post-body ol {
   margin-left: 24px;

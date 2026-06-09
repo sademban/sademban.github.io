@@ -6,13 +6,13 @@ description: "Environment variables are the invisible backbone of secure, scalab
 author: sademban
 categories: [DevOps, Configuration]
 tags:
-  - DevOps
-  - Security
-  - Configuration
-  - Cloud
-  - Environment Variables
-  - Docker
-  - Django
+  - devops
+  - security
+  - configuration
+  - cloud
+  - environment-variables
+  - docker
+  - django
 image: /assets/posts/blog/2025/10/why-env-vars/featured-hero.svg
 image_alt: "Diagram showing environment variables flowing into a cloud application"
 image_caption: "Environment variables: the invisible backbone of modern apps"

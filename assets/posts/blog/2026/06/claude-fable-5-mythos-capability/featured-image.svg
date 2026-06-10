@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Fable 5 Mythos capability dashboard</title>
+  <desc id="desc">Abstract dashboard showing capability, safety gates, and pricing meters for a frontier AI model release.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101828"/>
+      <stop offset="0.55" stop-color="#172033"/>
+      <stop offset="1" stop-color="#10251f"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#26364f"/>
+      <stop offset="1" stop-color="#172336"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.18">
+    <path d="M110 130h980M110 220h980M110 310h980M110 400h980M110 490h980" stroke="#d5e3ff" stroke-width="1"/>
+    <path d="M210 80v470M390 80v470M570 80v470M750 80v470M930 80v470" stroke="#d5e3ff" stroke-width="1"/>
+  </g>
+  <rect x="90" y="80" width="1020" height="470" rx="22" fill="#0b1220" opacity="0.62" filter="url(#shadow)"/>
+  <rect x="126" y="116" width="420" height="190" rx="16" fill="url(#panel)" stroke="#52627a"/>
+  <text x="156" y="162" fill="#e7eefc" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Fable 5</text>
+  <text x="156" y="204" fill="#aebbd0" font-family="Segoe UI, Arial, sans-serif" font-size="20">public Mythos-class path</text>
+  <path d="M156 248h310" stroke="#67e8f9" stroke-width="12" stroke-linecap="round"/>
+  <path d="M156 278h240" stroke="#94a3b8" stroke-width="12" stroke-linecap="round"/>
+  <rect x="126" y="336" width="420" height="178" rx="16" fill="#162337" stroke="#52627a"/>
+  <text x="156" y="382" fill="#e7eefc" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Capability</text>
+  <circle cx="178" cy="434" r="12" fill="#67e8f9"/>
+  <text x="205" y="441" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="21">coding</text>
+  <circle cx="330" cy="434" r="12" fill="#86efac"/>
+  <text x="357" y="441" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="21">vision</text>
+  <circle cx="178" cy="474" r="12" fill="#facc15"/>
+  <text x="205" y="481" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="21">long context</text>
+  <rect x="612" y="116" width="462" height="398" rx="16" fill="#172337" stroke="#52627a"/>
+  <text x="648" y="162" fill="#e7eefc" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Release controls</text>
+  <g transform="translate(650 204)">
+    <rect width="170" height="52" rx="12" fill="#0f172a" stroke="#38bdf8"/>
+    <text x="30" y="34" fill="#dbeafe" font-family="Segoe UI, Arial, sans-serif" font-size="20">Allowed</text>
+    <rect x="210" width="190" height="52" rx="12" fill="#0f172a" stroke="#f59e0b"/>
+    <text x="242" y="34" fill="#fef3c7" font-family="Segoe UI, Arial, sans-serif" font-size="20">Gated</text>
+  </g>
+  <path d="M694 326h230" stroke="#67e8f9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M694 370h170" stroke="#facc15" stroke-width="10" stroke-linecap="round"/>
+  <path d="M694 414h205" stroke="#fb7185" stroke-width="10" stroke-linecap="round"/>
+  <text x="940" y="333" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="20">apps</text>
+  <text x="880" y="377" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="20">security</text>
+  <text x="915" y="421" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="20">bio/chem</text>
+  <text x="648" y="482" fill="#aebbd0" font-family="Segoe UI, Arial, sans-serif" font-size="20">$10 input / $50 output per million tokens</text>
+</svg>

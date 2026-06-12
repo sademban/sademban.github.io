@@ -1,4 +1,45 @@
 ---
+- slug: quickref-me-developer-cheatsheets
+  title: using quickref.me for quick syntax checks
+  status: published
+  publish_after: 2026-06-12
+  category: blog
+  format: reference
+  description: A short note on using quickref.me and cheatsheets.zip for quick developer
+    references, with examples for Python, regex, Git, and Docker.
+  tags:
+  - productivity
+  - developer-experience
+  research_path: content-ops/research/quickref-me-developer-cheatsheets.md
+  draft_path: content-ops/drafts/quickref-me-developer-cheatsheets.markdown
+  image_plan:
+    type: generated
+    path: assets/posts/blog/2026/06/quickref-me-developer-cheatsheets/featured-image.png
+    alt: Dark developer desk illustration with the text quickref.me surrounded by
+      small code reference panels
+    caption: quickref.me works best as a quick reminder when the syntax is almost
+      in your head.
+  basis:
+  - quickref.me home page and topic pages checked on 2026-06-12.
+  - Fechin/reference README checked for the maintained-domain note.
+  - cheatsheets.zip home page and topic pages checked as the maintained reference.
+  source_urls:
+  - https://quickref.me/
+  - https://quickref.me/python
+  - https://quickref.me/regex
+  - https://quickref.me/git
+  - https://quickref.me/docker
+  - https://github.com/Fechin/reference
+  - https://cheatsheets.zip/
+  - https://cheatsheets.zip/python
+  - https://cheatsheets.zip/regex
+  - https://cheatsheets.zip/git
+  - https://cheatsheets.zip/docker
+  notes: Drafted from primary project pages. Tightened on 2026-06-12 to remove padded
+    AI-style phrasing. Generated featured image added with quickref.me text. Published
+    after author approval.
+  published_at: '2026-06-12'
+  published_path: _posts/blog/2026/06/2026-06-12-quickref-me-developer-cheatsheets.markdown
 - slug: docker-image-audit-with-dive
   title: How to audit Docker image bloat with dive and buildx
   status: idea
@@ -206,12 +247,14 @@
   published_at: '2026-06-06'
   published_path: _posts/blog/2026/06/2026-06-06-cifswitch-cve-2026-46243.markdown
 - slug: windows-build-2026-dev-tools
-  title: "Windows Build 2026 dev tools I would actually try first"
+  title: Windows Build 2026 dev tools I would actually try first
   status: published
   publish_after: 2026-06-08
   category: blog
   format: checklist
-  description: "Build 2026 had plenty of big platform talk, but the most useful Windows developer updates are the boring ones: repeatable setup, better terminal defaults, and less machine drift."
+  description: 'Build 2026 had plenty of big platform talk, but the most useful Windows
+    developer updates are the boring ones: repeatable setup, better terminal defaults,
+    and less machine drift.'
   tags:
   - windows
   - productivity
@@ -221,13 +264,15 @@
   image_plan:
     type: generated
     path: assets/posts/blog/2026/06/windows-build-2026-dev-tools/featured-image.png
-    alt: "Abstract developer workstation showing a command flow into setup, code, container, and checklist panels"
-    caption: "The most useful developer tooling usually makes setup less surprising."
+    alt: Abstract developer workstation showing a command flow into setup, code, container,
+      and checklist panels
+    caption: The most useful developer tooling usually makes setup less surprising.
   basis:
   - Official Windows Developer Blog Build 2026 announcement.
   - Microsoft Learn Dev Configs documentation.
   - Microsoft developer docs for WinGet Configuration and Windows developer tooling.
-  - Local repo decision note: draft is a reading guide, not a benchmark or hands-on review.
+  - Local repo decision note: draft is a reading guide, not a benchmark or hands-on
+      review.
   source_urls:
   - https://blogs.windows.com/windowsdeveloper/2026/06/02/build-2026-furthering-windows-as-the-trusted-platform-for-development/
   - https://learn.microsoft.com/en-us/windows/dev-configs/
@@ -238,12 +283,13 @@
   published_at: '2026-06-08'
   published_path: _posts/blog/2026/06/2026-06-08-windows-build-2026-dev-tools.markdown
 - slug: fukuoka-places-to-visit
-  title: "Places to visit when you are in Fukuoka"
+  title: Places to visit when you are in Fukuoka
   status: published
   publish_after: 2026-06-09
   category: blog
   format: travel-places
-  description: "Six Fukuoka places worth keeping on your map: quiet parks, old Hakata, shrine towns, sea views, and a temple just outside the city."
+  description: 'Six Fukuoka places worth keeping on your map: quiet parks, old Hakata,
+    shrine towns, sea views, and a temple just outside the city.'
   tags:
   - travel
   - fukuoka
@@ -253,11 +299,14 @@
   image_plan:
     type: sourced
     path: assets/posts/blog/2026/06/fukuoka-places-to-visit/featured-image.jpg
-    alt: "Blue sea and a white torii gate at Sakurai Futamigaura in Itoshima, Fukuoka"
-    caption: "Fukuoka is at its best when you leave room for the sea, the old town, and the quieter edges of the city."
+    alt: Blue sea and a white torii gate at Sakurai Futamigaura in Itoshima, Fukuoka
+    caption: Fukuoka is at its best when you leave room for the sea, the old town,
+      and the quieter edges of the city.
   basis:
-  - Official Fukuoka City tourism pages for Fukuoka Castle Ruins, Hakata Old Town, Dazaifu Tenmangu, Itoshima, and Uminonakamichi.
-  - Nanzoin official access page and Sasaguri Tourism Association for temple access and reclining Buddha details.
+  - Official Fukuoka City tourism pages for Fukuoka Castle Ruins, Hakata Old Town,
+    Dazaifu Tenmangu, Itoshima, and Uminonakamichi.
+  - Nanzoin official access page and Sasaguri Tourism Association for temple access
+    and reclining Buddha details.
   - Wikimedia Commons image pages checked for license and attribution before use.
   source_urls:
   - https://gofukuoka.jp/en/spots/detail/26898

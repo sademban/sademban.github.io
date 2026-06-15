@@ -1,4 +1,45 @@
 ---
+- slug: publishing-toon-fmtr-vscode-extension
+  title: publishing TOON FMTR, my first VS Code extension
+  status: published
+  publish_after: 2026-06-15
+  category: blog
+  format: lab-note
+  description: Notes from publishing TOON FMTR, a VS Code extension for TOON syntax
+    highlighting, formatting, JSON conversion, settings, and safer auto-convert behavior.
+  tags:
+  - vscode
+  - developer-experience
+  - javascript
+  - tooling
+  research_path: content-ops/research/publishing-toon-fmtr-vscode-extension.md
+  draft_path: content-ops/drafts/publishing-toon-fmtr-vscode-extension.markdown
+  image_plan:
+    type: generated
+    path: assets/posts/blog/2026/06/publishing-toon-fmtr-vscode-extension/featured-image.png
+    alt: Sketch-style illustration with TOON FMTR text, the extension logo, and JSON
+      to TOON conversion cards
+    caption: TOON FMTR adds syntax highlighting, formatting, and JSON conversion for
+      TOON files.
+  basis:
+  - Author handoff notes for TOON FMTR.
+  - Local package.json checked in the extension repo.
+  - Local npm run compile passed on 2026-06-15.
+  - Local npm audit --omit=dev passed with zero vulnerabilities on 2026-06-15.
+  - Local npm run vsix packaged toon-tools-0.0.2.vsix on 2026-06-15.
+  - Official VS Code extension publishing and manifest documentation.
+  source_urls:
+  - https://github.com/sademban/toon-tools
+  - https://code.visualstudio.com/api/working-with-extensions/publishing-extension
+  - https://code.visualstudio.com/api/references/extension-manifest
+  - https://code.visualstudio.com/api/references/contribution-points
+  - https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide
+  notes: Drafted from author handoff, local verification commands, and official VS
+    Code docs. Tightened on 2026-06-15 to remove padded AI-style phrasing. Avoids
+    exposing local machine paths. Mentions Azure DevOps/PAT/card setup friction as
+    local publishing experience. Generated featured image added on 2026-06-15.
+  published_at: '2026-06-15'
+  published_path: _posts/blog/2026/06/2026-06-15-publishing-toon-fmtr-vscode-extension.markdown
 - slug: quickref-me-developer-cheatsheets
   title: using quickref.me for quick syntax checks
   status: published

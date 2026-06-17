@@ -4,7 +4,7 @@ title: Privacy
 permalink: /privacy/
 ---
 
-This site is a personal blog by Nabin Sademba.
+This site is a personal technical blog.
 
 I do not sell personal information. The site may use basic analytics and advertising-related scripts to understand traffic, improve the site, and support the blog.
 

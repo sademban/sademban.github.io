@@ -4,4 +4,7 @@ title: CTF Writeups
 permalink: /ctfs/
 description: Walkthroughs, payloads, and notes from capture the flag events.
 category: ctf
+noindex: true
+sitemap: false
+adsense: false
 ---

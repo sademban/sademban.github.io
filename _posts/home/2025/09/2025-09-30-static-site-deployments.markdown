@@ -9,6 +9,10 @@ tags:
   - infra
   - hosting
   - benchmarking
+noindex: true
+sitemap: false
+adsense: false
+published: false
 ---
 
 Captured notes on deployment times, build minute quotas, and caching controls across GitHub Pages, Cloudflare Pages, and Netlify. The matrix now lives in the Ops notebook so switching platforms takes minutes instead of days.

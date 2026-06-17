@@ -8,6 +8,10 @@ categories: journal
 tags:
   - workflow
   - productivity
+noindex: true
+sitemap: false
+adsense: false
+published: false
 ---
 
 Spent the week tightening up my development workflow. Tweaked a Neovim macro to scaffold Go services faster, and added a make target that builds Docker images with multi-stage caching off by default. The tiny friction reductions are already adding up.

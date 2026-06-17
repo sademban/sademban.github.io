@@ -2,6 +2,9 @@
 layout: default
 title: Portfolio
 permalink: /portfolio/
+noindex: true
+sitemap: false
+adsense: false
 ---
 
 ## Featured Projects

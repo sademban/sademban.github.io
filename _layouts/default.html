@@ -22,7 +22,7 @@
       <div class="container site-header__inner">
         <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title | default: site.github.repository_name }}</a>
         <nav class="site-nav" aria-label="Primary navigation">
-          {%- assign nav_titles = "Tags|Blog|Journal|Uses|About|Now|Links" | split: "|" -%}
+          {%- assign nav_titles = "Tags|Blog|Uses|About|Now|Links" | split: "|" -%}
           {%- for nav_title in nav_titles -%}
             {%- assign nav_page = site.pages | where: "title", nav_title | first -%}
             {%- if nav_page -%}

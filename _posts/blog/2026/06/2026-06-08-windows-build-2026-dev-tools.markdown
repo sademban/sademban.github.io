@@ -12,6 +12,11 @@ tags:
 image: /assets/posts/blog/2026/06/windows-build-2026-dev-tools/featured-image.png
 image_alt: "Abstract developer workstation showing a command flow into setup, code, container, and checklist panels"
 image_caption: "The most useful developer tooling usually makes setup less surprising."
+noindex: true
+sitemap: false
+adsense: false
+hidden: true
+published: false
 ---
 
 ## Windows Build 2026 dev tools I would actually try first

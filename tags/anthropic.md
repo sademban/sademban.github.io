@@ -4,4 +4,7 @@ title: anthropic
 permalink: /tags/anthropic/
 tag: anthropic
 show_excerpts: true
+noindex: true
+sitemap: false
+adsense: false
 ---

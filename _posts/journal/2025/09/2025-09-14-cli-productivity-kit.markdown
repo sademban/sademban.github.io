@@ -9,6 +9,10 @@ tags:
   - cli
   - automation
   - developer-experience
+noindex: true
+sitemap: false
+adsense: false
+published: false
 ---
 
 Rebuilt my command-line toolkit from the ground up. Swapped ripgrep for `rg` across shell aliases, wired `fzf` into the history search, and set up just recipes to standardize app builds. I can land inside the correct repo mode with two keystrokes now.

@@ -112,15 +112,13 @@ I would not treat Nanzoin as just a photo stop. It is a temple, and that changes
 
 For me, Nanzoin belongs on this list because it adds a different mood to a Fukuoka trip: hills, temple paths, and a little distance from the city.
 
-## My take
+## How I would group the trip
 
 The good thing about Fukuoka is that the places do not all feel the same.
 
 Ohori Park gives you water and calm. Hakata gives you the older city. Dazaifu gives you a shrine town. Itoshima gives you the sea. Uminonakamichi gives you space. Nanzoin gives you quiet outside the center.
 
-That is enough.
-
-You do not need to turn Fukuoka into a race. Pick a few places, leave space between them, and let the city stay easy.
+That is enough for a relaxed first route. Pick a few places, leave space between them, and check official access pages before going.
 
 ## Sources and image credits
 

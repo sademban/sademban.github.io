@@ -4,7 +4,9 @@ title:  "Slimming down the Docker images (multi-stage build)"
 date:   2025-10-06 15:21:36 +0900
 description: "How multi-stage Dockerfiles cut runtime image size, what to watch for, and tips for smoother builds."
 author: sademban
-categories: Docker, docker compose
+categories:
+  - blog
+  - docker
 tags:
   - docker
   - multi-stage
@@ -12,6 +14,11 @@ tags:
 image: /assets/posts/blog/2025/10/slimming-down-docker-images/featured-hero.svg
 image_alt: "Abstract diagram showing build artifacts moving into a runtime container"
 image_caption: "Abstract builder-to-runtime flow for multi-stage Docker images"
+noindex: true
+sitemap: false
+adsense: false
+hidden: true
+published: false
 ---
 
 
@@ -59,9 +66,6 @@ Common tactics include:
 ## Bringing it together
 
 Treat slimming as an iterative exercise: profile what your application needs, experiment with multi-stage builds, and automate validation so you catch missing dependencies early. Keep a heavier "debug" tag handy for operational use, and document the rationale for every tool you remove. That balance delivers lean images without sacrificing maintainability.
-
-
-
 
 
 

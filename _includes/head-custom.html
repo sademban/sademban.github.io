@@ -27,6 +27,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {%- if page.adsense == false -%}
   <meta name="adsense-optout" content="true">
 {%- endif -%}
+{%- if page.noindex or page.categories contains "home" or page.categories contains "journal" -%}
+  <meta name="robots" content="noindex,follow">
+{%- endif -%}
 {%- if site.adsense_auto_load != nil -%}
   <meta name="adsense-auto-load" content="{{ site.adsense_auto_load }}">
 {%- endif -%}
@@ -43,8 +46,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:url" content="{{ page.url | relative_url | absolute_url }}">
 {%- if page.image -%}
 <meta property="og:image" content="{{ page.image | relative_url | absolute_url }}">
+{%- if page.image_alt -%}
+<meta property="og:image:alt" content="{{ page.image_alt | escape }}">
+{%- endif -%}
 {%- endif -%}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
 <meta name="twitter:description" content="{{ meta_description | strip_newlines | strip | escape }}">
+{%- if page.image -%}
+<meta name="twitter:image" content="{{ page.image | relative_url | absolute_url }}">
+{%- if page.image_alt -%}
+<meta name="twitter:image:alt" content="{{ page.image_alt | escape }}">
+{%- endif -%}
+{%- endif -%}
 <style>.writing-header h1::before, .archive-header h1::before, .tag-collection__header h1::before { content: none; }</style>

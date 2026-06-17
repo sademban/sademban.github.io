@@ -8,10 +8,15 @@ included automatically.
 
 <script>
   (function(){
-  var meta = document.querySelector('meta[name=adsense-client]');
-  var pub = meta ? meta.getAttribute('content') : null;
+    function getPublisherId(){
+      var meta = document.querySelector('meta[name=adsense-client]');
+      return meta ? meta.getAttribute('content') : null;
+    }
+
     function loadAdsense(){
       if (document.querySelector('script[data-adsense-loaded]')) return;
+      var pub = getPublisherId();
+      if (!pub) return;
       var s = document.createElement('script');
       s.async = true;
       s.setAttribute('data-adsense-loaded','true');
@@ -29,7 +34,6 @@ included automatically.
 
         function loadIfAllowed(){
           if (pageOptOut && pageOptOut.getAttribute('content') === 'true'){
-            console.log('AdSense: page opted out via front matter.');
             return;
           }
           loadAdsense();
@@ -51,7 +55,6 @@ included automatically.
             }
           } catch(e){ console.error(e); }
           if (ok) loadAdsense();
-          else console.log('AdSense: CMP present but consent not granted.');
         }
 
         // Detect IAB TCF __tcfapi first (common with Google-managed CMP)
@@ -85,7 +88,7 @@ included automatically.
             // auto-load globally if configured in site config
             loadIfAllowed();
           } else {
-            console.warn('No CMP detected and auto_load disabled: AdSense runtime will not be loaded.');
+          return;
           }
         }
       } catch(e){

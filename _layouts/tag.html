@@ -3,7 +3,8 @@ layout: default
 ---
 
 {%- assign tag_name = page.title -%}
-{%- assign posts_sorted = page.posts | sort: "date" | reverse -%}
+{%- assign posts_sorted = page.posts | where_exp: "post", "post.noindex != true" -%}
+{%- assign posts_sorted = posts_sorted | where_exp: "post", "post.hidden != true" | sort: "date" | reverse -%}
 {%- assign posts_count = posts_sorted | size -%}
 
 <section class="tag-collection">

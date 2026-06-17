@@ -16,6 +16,11 @@ tags:
 image: /assets/posts/blog/2025/10/why-env-vars/featured-hero.svg
 image_alt: "Diagram showing environment variables flowing into a cloud application"
 image_caption: "Environment variables: the invisible backbone of modern apps"
+noindex: true
+sitemap: false
+adsense: false
+hidden: true
+published: false
 ---
 
 ## 🔐 Why Environment Variables Matter More Than You Think ?

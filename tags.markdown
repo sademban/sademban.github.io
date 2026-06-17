@@ -5,13 +5,24 @@ permalink: /tags/
 ---
 
 {%- assign sorted_tags = site.tags | sort -%}
-{%- assign total_posts = site.posts | size -%}
-{%- assign tag_count = sorted_tags | size -%}
+{%- assign visible_posts = site.posts | where_exp: "post", "post.noindex != true" -%}
+{%- assign visible_posts = visible_posts | where_exp: "post", "post.hidden != true" -%}
+{%- assign visible_posts = visible_posts | where_exp: "post", "post.published != false" -%}
+{%- assign total_posts = visible_posts | size -%}
+{%- assign visible_tag_count = 0 -%}
+{%- for tag in sorted_tags -%}
+  {%- assign tag_posts = tag[1] | where_exp: "post", "post.noindex != true" -%}
+  {%- assign tag_posts = tag_posts | where_exp: "post", "post.hidden != true" -%}
+  {%- assign tag_posts = tag_posts | where_exp: "post", "post.published != false" -%}
+  {%- if tag_posts.size > 0 -%}
+    {%- assign visible_tag_count = visible_tag_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
 
 <section class="tags-archive">
   <header class="tags-header">
     <h1>Explore Topics</h1>
-    <p>{{ total_posts }} {% if total_posts == 1 %}post{% else %}posts{% endif %} across {{ tag_count }} {% if tag_count == 1 %}tag{% else %}tags{% endif %}.</p>
+    <p>{{ total_posts }} {% if total_posts == 1 %}post{% else %}posts{% endif %} across {{ visible_tag_count }} {% if visible_tag_count == 1 %}tag{% else %}tags{% endif %}.</p>
   </header>
 
   {%- if sorted_tags and sorted_tags != empty -%}
@@ -27,8 +38,13 @@ permalink: /tags/
       {%- for tag in sorted_tags -%}
         {%- assign tag_name_raw = tag[0] -%}
         {%- assign tag_name = tag_name_raw | arrayify | join: ' ' -%}
-        {%- assign posts = tag[1] | sort: "date" | reverse -%}
+        {%- assign posts = tag[1] | where_exp: "post", "post.noindex != true" -%}
+        {%- assign posts = posts | where_exp: "post", "post.hidden != true" -%}
+        {%- assign posts = posts | where_exp: "post", "post.published != false" | sort: "date" | reverse -%}
         {%- assign post_count = posts | size -%}
+        {%- if post_count == 0 -%}
+          {%- continue -%}
+        {%- endif -%}
         {%- assign latest_post = posts[0] -%}
         {%- assign tag_slug = tag_name | slugify -%}
         <tr>

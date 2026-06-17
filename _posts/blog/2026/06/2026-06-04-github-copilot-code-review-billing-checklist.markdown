@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Copilot code review on private repos: check the bill before you automate it"
-description: "GitHub Copilot code review can now touch both AI Credits and Actions minutes on private repositories. Here is the simple rollout check I would do first."
+title: "Copilot code review on private repos: check usage before automating it"
+description: "GitHub Copilot code review can touch both AI Credits and Actions minutes on private repositories. Here is a practical rollout checklist."
 date: 2026-06-04 09:00:00 +0900
 author: sademban
 categories: blog
@@ -15,13 +15,13 @@ image_alt: "Abstract code review checklist beside a usage budget gauge"
 image_caption: "Copilot code review is useful, but private repositories need usage guardrails."
 ---
 
-## Copilot code review on private repos: check the bill before you automate it
+## Copilot code review on private repos: check usage before automating it
 
-I like the idea of Copilot reviewing a pull request before a human spends time on it. A second pass can catch boring mistakes, missing tests, unclear code, or places where the change needs more explanation.
+Copilot code review can be useful before a human reviewer spends time on a pull request. A second pass can catch small mistakes, missing tests, unclear code, or places where the change needs more explanation.
 
 But I would be careful before enabling it automatically across private repositories.
 
-GitHub changed the cost model on June 1, 2026. For private repositories, Copilot code review can now involve two separate buckets:
+GitHub changed the cost model on June 1, 2026. For private repositories, Copilot code review can involve two separate usage buckets:
 
 - GitHub AI Credits for the review itself.
 - GitHub Actions minutes for the runner work behind the review.
@@ -87,7 +87,7 @@ Do not request it automatically on every small change until the budget impact is
 Human review still owns the final decision.
 ```
 
-That is probably enough for the first version.
+That is enough for a first rollout rule.
 
 The goal is not to make Copilot hard to use. The goal is to avoid a quiet setting becoming another thing nobody understands when the bill arrives.
 

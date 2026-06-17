@@ -2,14 +2,16 @@
 layout: default
 ---
 
-{%- assign home_posts = site.posts | sort: "date" | reverse -%}
+{%- assign home_posts = site.posts | where_exp: "post", "post.path contains '/blog/'" -%}
+{%- assign home_posts = home_posts | where_exp: "post", "post.noindex != true" -%}
+{%- assign home_posts = home_posts | where_exp: "post", "post.hidden != true" | sort: "date" | reverse -%}
 {%- assign date_format = page.timeline_date_format | default: "%b %d" -%}
 {%- assign home_posts_by_year = home_posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
 
 <section class="writing-notes">
   <header class="writing-header">
-    <h1>Writing &amp; Notes</h1>
-    <p class="writing-subhead">A mix of build notes, tutorials, and experiments.</p>
+    <h1>Writing</h1>
+    <p class="writing-subhead">Build notes, tutorials, and technical experiments.</p>
   </header>
 
   {%- if home_posts.size > 0 -%}

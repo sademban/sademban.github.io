@@ -9,6 +9,10 @@ tags:
   - tools
   - productivity
   - experimentation
+noindex: true
+sitemap: false
+adsense: false
+published: false
 ---
 
 This month’s \"tools worth watching\" list: Neovim nightly with the built-in LSP UX overhaul, Buf CLI for organizing protobufs, and GitHub’s Copilot workspace experiment. Wrote down first impressions plus what would make each stick in the daily workflow.

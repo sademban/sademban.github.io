@@ -4,5 +4,8 @@ title: windows
 permalink: /tags/windows/
 tag: windows
 show_excerpts: true
+noindex: true
+sitemap: false
+adsense: false
 ---
 

@@ -9,6 +9,10 @@ tags:
   - writing
   - planning
   - ideas
+noindex: true
+sitemap: false
+adsense: false
+published: false
 ---
 
 Started outlining a monthly digest: topics range from Docker image archaeology to Go profiling case studies and a walkthrough of the notebook-driven research workflow.

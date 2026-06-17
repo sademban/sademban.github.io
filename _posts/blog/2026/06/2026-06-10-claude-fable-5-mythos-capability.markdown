@@ -13,6 +13,11 @@ tags:
 image: /assets/posts/blog/2026/06/claude-fable-5-mythos-capability/featured-image.svg
 image_alt: "Abstract model release dashboard showing capability, safety gates, and pricing meters"
 image_caption: "The interesting part is not just the model. It is the fence around the model."
+noindex: true
+sitemap: false
+adsense: false
+hidden: true
+published: false
 ---
 
 ## Claude Fable 5 and Mythos capability: powerful, expensive, and deliberately fenced

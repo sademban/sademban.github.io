@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why Service Health Checks Matter More Than You Think ?"
+title: "Service health checks: official status pages and curl checks"
 description: "A compact reference of status pages and quick healthcheck commands for popular services (GitHub, AWS, Azure, Bitbucket, Cloudflare, Netlify, and more)."
 date: 2025-10-09 10:00:00 +0900
 author: sademban
@@ -15,9 +15,11 @@ image_alt: "doodle image showing service health check"
 image_caption: "Before You Get Frustrated: Quick Healthchecks for Common Services"
 ---
 
-## 🩺 Why Service Health Checks Matter More Than You Think ?
+## Service health checks: official status pages and curl checks
 
-When something breaks in your stack the first reaction is often "what changed?" — but 9 times out of 10 it's an external service outage or a partial degradation. Here’s a short, skimmable reference you can keep handy: official status pages, programmatic endpoints (when available), and copy-paste curl checks you can run from your terminal.
+When something breaks in a stack, the first question is usually "what changed?" Sometimes the answer is local: a deploy, a DNS change, a bad secret, or a failed migration. Sometimes the answer is upstream: a partial outage in GitHub, AWS, Cloudflare, npm, or another service the app depends on.
+
+This is a short reference for that second case: official status pages, programmatic status endpoints where they exist, and small `curl` checks that are useful during triage.
 
 Tip: many services host their status pages on Statuspage.io and expose a small JSON API at `/api/v2/status.json` or `/api/v2/summary.json`. If the status page looks healthy but your app is affected, check the provider's API and region-specific dashboards.
 
@@ -170,7 +172,7 @@ curl -s "$URL" | jq -r '.status.description'
 curl -s "$URL" | jq -r '.components[] | "\(.name): \(.status)"'
 ```
 
-If you want an HTTP code-only quick-check (not recommended for status detail but useful for simple monitoring):
+For an HTTP code-only quick check, use the status page URL directly. This is not enough for incident detail, but it is useful for simple monitoring:
 
 ```bash
 curl -I -s -o /dev/null -w "%{http_code} %{url_effective}\n" https://www.githubstatus.com/
@@ -189,10 +191,6 @@ curl -I -s -o /dev/null -w "%{http_code} %{url_effective}\n" https://www.githubs
 3. Use `traceroute`/`mtr` to check network path to the provider.
 4. Test from multiple locations (local dev, CI runner, an external host) to isolate whether it’s a client-specific issue.
 
-## Final notes
+## Final note
 
-Keep this post as a quick reference. If you want, I can:
-
-- add a small `scripts/healthcheck.sh` that runs a chosen subset of checks and returns non-zero on failure,
-- add GitHub Actions workflow to ping these endpoints and post a digest to Slack, or
-- create a single-page status dashboard inside the repo that aggregates these APIs for your team.
+Treat provider status pages as one signal, not the whole incident review. If the provider says everything is healthy but your users are still affected, compare the provider status with your own deploy timeline, metrics, logs, DNS state, and checks from more than one network.

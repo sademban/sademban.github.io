@@ -4,4 +4,7 @@ title: claude
 permalink: /tags/claude/
 tag: claude
 show_excerpts: true
+noindex: true
+sitemap: false
+adsense: false
 ---

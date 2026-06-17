@@ -8,6 +8,10 @@ categories: home
 tags:
   - site
   - ui
+noindex: true
+sitemap: false
+adsense: false
+published: false
 ---
 
 The homepage just received its first major polish: a dark/light theme toggle, simplified navigation, and a curated Writing & Notes stream so visitors can scan recent highlights at a glance.

@@ -2,7 +2,8 @@
 layout: default
 ---
 
-{%- assign posts_to_show = site.posts -%}
+{%- assign posts_to_show = site.posts | where_exp: "post", "post.noindex != true" -%}
+{%- assign posts_to_show = posts_to_show | where_exp: "post", "post.hidden != true" -%}
 {%- if page.category -%}
   {%- assign posts_to_show = posts_to_show | where_exp: "post", "post.categories contains page.category" -%}
 {%- endif -%}

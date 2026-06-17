@@ -9,6 +9,10 @@ tags:
   - workflow
   - content
   - organization
+noindex: true
+sitemap: false
+adsense: false
+published: false
 ---
 
 Laid down a new structure for posts and their accompanying assets. Every section now gets a predictable year/month/slug home, with matching folders under `assets/` for screenshots, diagrams, or downloads.

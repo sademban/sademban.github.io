@@ -4,4 +4,7 @@ title: ai
 permalink: /tags/ai/
 tag: ai
 show_excerpts: true
+noindex: true
+sitemap: false
+adsense: false
 ---

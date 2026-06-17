@@ -21,9 +21,9 @@
 title: sademban's blog
 email: nabinsademba@gmail.com
 description: >-
-  Journal entries, build notes, and experiments from whatever I'm tinkering with next.
+  Practical software notes, infrastructure writeups, security checks, and developer tool experiments.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://sademban.github.io" # your GitHub Pages URL
+url: "https://nabinsademba.com.np" # your public site URL
 twitter_username: madbios9
 github_username:  sademban
 author: sademban

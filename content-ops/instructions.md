@@ -2,6 +2,33 @@
 
 This site publishes practical tech writing for readers who want usable guidance, not generic trend content. Automation can help with scheduling, file placement, metadata, and checks, but it must not publish unsupported claims.
 
+## AdSense Monetization Requirement
+
+This blog is being prepared for Google AdSense verification and future ad revenue. Every new post must be written with AdSense content quality in mind.
+
+Before drafting or publishing, assume the post may be reviewed for low-value content. Do not publish loose-end posts, filler notes, thin commentary, generic AI-written summaries, or news recaps that do not add original value.
+
+For every researched post:
+
+- Start from a useful reader problem, not from a need to publish something today.
+- Prefer first-hand experience, local testing, screenshots, command output, repo work, or clearly cited primary sources.
+- Keep sources, references, or evidence in the post unless there is a specific reason not to.
+- Make uncertainty explicit. If something was not tested, say so.
+- Avoid claims that sound confident but are only inferred from secondary reporting.
+- Do not publish if the article feels unfinished, too short, too generic, or hard to verify.
+
+If a post is not strong enough for AdSense review, keep it in `content-ops/drafts/` or mark the post with:
+
+```yaml
+published: false
+noindex: true
+sitemap: false
+adsense: false
+hidden: true
+```
+
+The default decision for weak content is to hold it back, not publish it.
+
 ## Editorial Focus
 
 Write mostly about:

@@ -9,6 +9,10 @@ tags:
   - linux
   - docker
   - benchmarking
+noindex: true
+sitemap: false
+adsense: false
+published: false
 ---
 
 Ran a bake-off between Alpine and Debian slim images for a service that leans on OpenSSL. Measured startup time, memory footprint, and the cost of pulling extra musl-compatible packages. Debian won by a small margin once we factored in debugging tooling.

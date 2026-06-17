@@ -4,7 +4,9 @@ title: "Omarchy 3.1: Hyprland’s Beauty, Arch’s Speed — Without the Yak‑S
 date: 2025-10-21 00:01:00 +0000
 description: "A developer’s take on Omarchy 3.1: what it solves, what’s great, and what to watch before switching."
 author: sademban
-categories: Linux, Arch, Hyprland
+categories:
+  - blog
+  - linux
 tags:
   - linux
   - arch
@@ -14,6 +16,11 @@ tags:
   - basecamp
 image: /assets/posts/blog/2025/10/omarchy/omarchy.png
 image_alt: "Omarchy Hyprland desktop screenshot"
+noindex: true
+sitemap: false
+adsense: false
+hidden: true
+published: false
 ---
 ## 🚀 Omarchy 3.1 — what is the hype
 
@@ -48,7 +55,4 @@ Tiling with sane gaps + animations made focus work pleasant. Switching contexts 
 ## Should you try it?
 
 If you want Arch’s freshness and a modern Wayland desktop without ricing from scratch, Omarchy delivered for me. If Secure Boot is non‑negotiable, or you’re on NVIDIA and unwilling to tweak, you might be happier elsewhere (or try Omakub on Ubuntu).
-
-
-
 

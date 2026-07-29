@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Four always-on servers collapsing into one server plus on-demand Lambda</title>
+  <desc id="desc">Abstract illustration of four server racks fading out into one active server and a serverless function icon, representing a migration from always-on EC2 instances to Lambda.</desc>
+  <rect width="1200" height="630" fill="#151b23"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#grid)" opacity="0.22"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#8bd8ff" stroke-width="1" opacity="0.25"/>
+    </pattern>
+    <linearGradient id="panel" x1="120" x2="1080" y1="90" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#202938"/>
+      <stop offset="1" stop-color="#101722"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop stop-color="#9dff4f"/>
+      <stop offset="1" stop-color="#6fd6ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="90" y="80" width="1020" height="470" rx="28" fill="url(#panel)" stroke="#38465a" stroke-width="2"/>
+
+  <!-- four fading server racks on the left -->
+  <g opacity="0.85">
+    <rect x="150" y="150" width="110" height="330" rx="12" fill="#0e141d" stroke="#2e3b4e" stroke-width="2"/>
+    <rect x="170" y="175" width="70" height="14" rx="4" fill="#6fd6ff" opacity="0.6"/>
+    <rect x="170" y="200" width="70" height="10" rx="3" fill="#ffffff" opacity="0.18"/>
+    <rect x="170" y="222" width="70" height="10" rx="3" fill="#ffffff" opacity="0.18"/>
+    <circle cx="178" cy="460" r="6" fill="#9dff4f"/>
+  </g>
+  <g opacity="0.55">
+    <rect x="272" y="150" width="110" height="330" rx="12" fill="#0e141d" stroke="#2e3b4e" stroke-width="2"/>
+    <rect x="292" y="175" width="70" height="14" rx="4" fill="#6fd6ff" opacity="0.4"/>
+    <rect x="292" y="200" width="70" height="10" rx="3" fill="#ffffff" opacity="0.12"/>
+    <rect x="292" y="222" width="70" height="10" rx="3" fill="#ffffff" opacity="0.12"/>
+    <circle cx="300" cy="460" r="6" fill="#ffd166" opacity="0.7"/>
+  </g>
+  <g opacity="0.3">
+    <rect x="394" y="150" width="110" height="330" rx="12" fill="#0e141d" stroke="#2e3b4e" stroke-width="2"/>
+    <rect x="414" y="175" width="70" height="14" rx="4" fill="#6fd6ff" opacity="0.25"/>
+    <rect x="414" y="200" width="70" height="10" rx="3" fill="#ffffff" opacity="0.08"/>
+    <rect x="414" y="222" width="70" height="10" rx="3" fill="#ffffff" opacity="0.08"/>
+    <circle cx="422" cy="460" r="6" fill="#ff6b6b" opacity="0.5"/>
+  </g>
+  <g opacity="0.15">
+    <rect x="516" y="150" width="110" height="330" rx="12" fill="#0e141d" stroke="#2e3b4e" stroke-width="2"/>
+    <rect x="536" y="175" width="70" height="14" rx="4" fill="#6fd6ff" opacity="0.15"/>
+    <rect x="536" y="200" width="70" height="10" rx="3" fill="#ffffff" opacity="0.05"/>
+    <rect x="536" y="222" width="70" height="10" rx="3" fill="#ffffff" opacity="0.05"/>
+    <circle cx="544" cy="460" r="6" fill="#ff6b6b" opacity="0.3"/>
+  </g>
+
+  <!-- arrow -->
+  <path d="M660 315 L760 315" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M736 291 L764 315 L736 339" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- one active server on the right -->
+  <rect x="800" y="150" width="130" height="330" rx="12" fill="#0e141d" stroke="#9dff4f" stroke-width="2"/>
+  <rect x="822" y="178" width="86" height="16" rx="5" fill="#9dff4f" opacity="0.75"/>
+  <rect x="822" y="206" width="86" height="12" rx="4" fill="#ffffff" opacity="0.22"/>
+  <rect x="822" y="230" width="86" height="12" rx="4" fill="#ffffff" opacity="0.22"/>
+  <rect x="822" y="254" width="86" height="12" rx="4" fill="#ffffff" opacity="0.22"/>
+  <circle cx="834" cy="460" r="7" fill="#9dff4f"/>
+
+  <!-- serverless function icon -->
+  <circle cx="1010" cy="315" r="110" fill="#0e141d" stroke="#314157" stroke-width="2"/>
+  <path d="M968 260 L968 370" stroke="#6fd6ff" stroke-width="10" stroke-linecap="round" opacity="0.5"/>
+  <path d="M1006 250 L960 316 L1000 316 L968 380" fill="none" stroke="url(#accent)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1052 260 L1052 370" stroke="#6fd6ff" stroke-width="10" stroke-linecap="round" opacity="0.5"/>
+
+  <path d="M140 540 C280 485 405 582 560 532 S850 458 1062 530" fill="none" stroke="#6fd6ff" stroke-width="2" opacity="0.25"/>
+</svg>

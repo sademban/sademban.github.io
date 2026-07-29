@@ -1,4 +1,34 @@
 ---
+- slug: from-four-instances-to-one-lambda-migration
+  title: 'From Four EC2 Instances to One: Moving Our Audio Pipeline to Lambda'
+  status: published
+  publish_after: 2026-07-29
+  published_at: '2026-07-29'
+  published_path: _posts/blog/2026/07/2026-07-29-from-four-instances-to-one-lambda-migration.markdown
+  category: blog
+  format: lab-note
+  description: How we moved a bursty audio processing pipeline off four always-on
+    EC2 instances onto Lambda, cutting infrastructure cost with a feature-flagged,
+    zero-downtime rollout.
+  tags:
+  - aws
+  - lambda
+  - infrastructure
+  - cost-optimization
+  draft_path: _drafts/from-four-instances-to-one-lambda-migration.markdown
+  image_plan:
+    type: generated
+    path: assets/posts/blog/2026/07/from-four-instances-to-one-lambda-migration/featured-image.svg
+    alt: Four always-on server racks fading out into one active server and a serverless
+      function icon
+    caption: Two bursty EC2 workers moved to Lambda; the API and lightweight worker
+      stayed on the one remaining instance.
+  basis:
+  - Personal lab note from a real production migration.
+  - Cost figures are an estimate from actual before/after instance pricing, not an
+    audited Cost Explorer export.
+  notes: Drafted from author's own migration experience. No external sources —
+    this is first-hand infrastructure work, not a researched post.
 - slug: publishing-toon-fmtr-vscode-extension
   title: publishing TOON FMTR, my first VS Code extension
   status: published

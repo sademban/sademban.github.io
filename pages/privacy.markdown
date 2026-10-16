@@ -2,6 +2,8 @@
 layout: default
 title: Privacy
 permalink: /privacy/
+adsense: false
+tracking: false
 ---
 
 This site is a personal technical blog.

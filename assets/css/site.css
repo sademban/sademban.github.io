@@ -188,6 +188,13 @@ hr {
   min-width: 0;
 }
 
+.archive-excerpt {
+  color: var(--site-muted);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 6px 0 0;
+}
+
 .writing-link,
 .post-link {
   color: var(--site-link) !important;

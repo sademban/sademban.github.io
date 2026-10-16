@@ -3,7 +3,7 @@ layout: default
 ---
 {% include article-jsonld.html %}
 
-{%- assign post_author = page.author | default: site.author -%}
+{%- assign post_author = site.author | default: page.author -%}
 {%- if post_author and post_author.name -%}
   {%- assign post_author_name = post_author.name -%}
 {%- else -%}
@@ -21,7 +21,7 @@ layout: default
   <h1>{{ page.title }}</h1>
 
 {%- if post_author_name -%}
-  <p class="post-author">by {{ post_author_name }}</p>
+  <p class="post-author">by <a href="{{ '/about/' | relative_url }}">{{ post_author_name }}</a></p>
 {%- endif -%}
 </header>
 

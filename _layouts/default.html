@@ -13,7 +13,7 @@
   </head>
 
   <body>
-  {%- if site.gtm_id and site.gtm_id != "" -%}
+  {%- if page.tracking != false and site.gtm_id and site.gtm_id != "" -%}
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.gtm_id }}"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   {%- endif -%}
@@ -22,7 +22,7 @@
       <div class="container site-header__inner">
         <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title | default: site.github.repository_name }}</a>
         <nav class="site-nav" aria-label="Primary navigation">
-          {%- assign nav_titles = "Tags|Blog|Uses|About|Now|Links" | split: "|" -%}
+          {%- assign nav_titles = "Blog|Tags|About|Contact" | split: "|" -%}
           {%- for nav_title in nav_titles -%}
             {%- assign nav_page = site.pages | where: "title", nav_title | first -%}
             {%- if nav_page -%}

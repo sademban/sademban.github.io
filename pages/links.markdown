@@ -2,6 +2,9 @@
 layout: default
 title: Links
 permalink: /links/
+noindex: true
+sitemap: false
+adsense: false
 ---
 
 ## Site

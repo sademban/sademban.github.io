@@ -2,6 +2,7 @@
 layout: default
 title: Tags
 permalink: /tags/
+adsense: false
 ---
 
 {%- assign sorted_tags = site.tags | sort -%}

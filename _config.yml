@@ -26,7 +26,15 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nabinsademba.com.np" # your public site URL
 twitter_username: madbios9
 github_username:  sademban
-author: sademban
+author: Nabin Sademba
+
+defaults:
+  - scope:
+      path: "tags"
+    values:
+      noindex: true
+      sitemap: false
+      adsense: false
 
 # Build settings
 theme: jekyll-theme-hacker

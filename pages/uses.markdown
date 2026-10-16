@@ -2,6 +2,9 @@
 layout: default
 title: Uses
 permalink: /uses/
+noindex: true
+sitemap: false
+adsense: false
 ---
 
 This is the current compute and infrastructure setup behind my workbench.

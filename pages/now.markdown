@@ -3,6 +3,9 @@ layout: default
 title: Now
 permalink: /now/
 last_updated: 2025-10-06
+noindex: true
+sitemap: false
+adsense: false
 ---
 
 ### Last updated {{ page.last_updated | date: "%B %d, %Y" }}

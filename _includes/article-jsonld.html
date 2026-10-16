@@ -9,7 +9,8 @@
   "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
   "author": {
     "@type": "Person",
-    "name": {{ (page.author | default: site.author) | jsonify }}
+    "name": {{ site.author | jsonify }},
+    "url": {{ '/about/' | relative_url | absolute_url | jsonify }}
   }{%- if page.image -%},
   "image": {{ page.image | relative_url | absolute_url | jsonify }}{%- endif -%},
   "url": {{ canonical_url | jsonify }},

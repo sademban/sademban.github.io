@@ -9,7 +9,9 @@
     {% include head-custom.html %}
 
 {% seo %}
+{%- if page.tracking != false -%}
 {% include ga4.html %}
+{%- endif -%}
   </head>
 
   <body>

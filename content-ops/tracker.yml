@@ -396,3 +396,53 @@
   notes: Published after author approval on 2026-06-09.
   published_at: '2026-06-09'
   published_path: _posts/blog/2026/06/2026-06-09-fukuoka-places-to-visit.markdown
+- slug: reclaim-docker-desktop-wsl2-vhdx-space
+  title: 'When WSL 2 will not shrink: reclaim Docker Desktop''s VHDX on Windows'
+  status: published
+  publish_after: 2026-10-16
+  category: blog
+  format: debugging-guide
+  description: A safe cleanup and compaction sequence for reclaiming Windows disk
+    space from Docker Desktop's WSL 2 VHDX without deleting important volumes.
+  tags:
+  - docker
+  - windows
+  - wsl
+  - ops
+  research_path: content-ops/research/reclaim-docker-desktop-wsl2-vhdx-space.md
+  draft_path: content-ops/drafts/reclaim-docker-desktop-wsl2-vhdx-space.markdown
+  image_plan:
+    type: generated
+    path: /assets/posts/blog/2026/10/reclaim-docker-desktop-wsl2-vhdx-space/featured-image.png
+    alt: Hand-drawn diagram of Docker running inside WSL 2 on Windows, a growing
+      docker_data.vhdx, sparse auto-shrink disabled in WSL 2.5.6, and the clean,
+      shut down, compact recovery sequence
+    caption: 'Since WSL 2.5.6 gated sparse VHD support, reclaiming Docker Desktop
+      space is a two-stage job: clean unused Docker data, then compact the stopped
+      VHDX.'
+  basis:
+  - Official Microsoft documentation for WSL configuration, disk space, DiskPart compaction,
+    and Optimize-VHD.
+  - Current Microsoft WSL source for the sparse-VHD safety disable and the built-in
+    distro compaction command.
+  - Official Docker documentation for the WSL 2 data path, backup procedure, settings,
+    and prune behavior.
+  - Local command checks confirmed WSL 3.0.3.0 exposes wsl --manage <Distro> --compact,
+    Docker CLI 29.8.2 is installed, and DiskPart is available.
+  source_urls:
+  - https://learn.microsoft.com/en-us/windows/wsl/disk-space
+  - https://learn.microsoft.com/en-us/windows/wsl/wsl-config
+  - https://github.com/microsoft/WSL/releases/tag/2.5.6
+  - https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/compact-vdisk
+  - https://learn.microsoft.com/en-us/powershell/module/hyper-v/optimize-vhd
+  - https://github.com/microsoft/WSL/blob/master/src/windows/common/WslCoreFilesystem.cpp
+  - https://github.com/microsoft/WSL/blob/master/src/windows/common/WslClient.cpp
+  - https://docs.docker.com/desktop/features/wsl/
+  - https://docs.docker.com/desktop/settings-and-maintenance/backup-and-restore/
+  - https://docs.docker.com/desktop/settings-and-maintenance/settings/
+  - https://docs.docker.com/reference/cli/docker/system/prune/
+  notes: Author requested this practical post for publishing on 2026-10-16. No destructive
+    cleanup or VHDX compaction was run in the restricted session, so the draft makes
+    that limitation explicit and includes no fabricated before/after measurement.
+  published_at: '2026-10-16'
+  published_path: _posts/blog/2026/10/2026-10-16-reclaim-docker-desktop-wsl2-vhdx-space.markdown

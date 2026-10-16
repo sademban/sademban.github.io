@@ -17,21 +17,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','{{ site.gtm_id }}');
 </script>
 {%- endif -%}
-{%- include cmp.html -%}
-{%- if site.adsense_publisher_id and site.adsense_publisher_id != "" -%}
+{%- if site.adsense_publisher_id and site.adsense_publisher_id != "" and page.adsense != false -%}
   {%- include adsense.html -%}
 {%- endif -%}
 {%- if site.adsense_publisher_id and site.adsense_publisher_id != "" -%}
   <meta name="adsense-client" content="{{ site.adsense_publisher_id }}">
 {%- endif -%}
-{%- if page.adsense == false -%}
-  <meta name="adsense-optout" content="true">
-{%- endif -%}
 {%- if page.noindex or page.categories contains "home" or page.categories contains "journal" -%}
   <meta name="robots" content="noindex,follow">
-{%- endif -%}
-{%- if site.adsense_auto_load != nil -%}
-  <meta name="adsense-auto-load" content="{{ site.adsense_auto_load }}">
 {%- endif -%}
 {%- assign meta_description = page.description | default: page.excerpt | default: site.description -%}
 <meta name="description" content="{{ meta_description | strip_newlines | strip | escape }}">
